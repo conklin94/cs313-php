@@ -11,8 +11,8 @@
       </a>
       <h1 id="headerTitle">My super cool website</h1>
       <?php
-        $timeDate = date("h:i:s A, M d, Y");
-        echo "<h1>It is currently $timeDate</h1>";
+        $timeDate = date("M d, Y, h:i:s A");
+        echo "<p>Time: $timeDate</p>";
       ?>
     </div>
 
