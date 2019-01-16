@@ -33,9 +33,7 @@
     <br>
     <a href="assignments.php">Click here to go to the assignments page</a>
     <?php
-
-      $x = 17;
-
+      include 'header.php';
     ?>
     <script src="index.js"></script>
   </body>

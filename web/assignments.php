@@ -11,9 +11,7 @@
     <a href="index.php">Go Home</a>
 
     <?php
-
-      $x = 17;
-
+      include 'header.php';
     ?>
     <script src="assignments.js"></script>
 </body>
