@@ -1,7 +1,35 @@
 body {
   background-color: black;
-}
-h1 {
   color: white;
   text-align: center;
+}
+#batman {
+  width: auto;
+  height: 480px;
+  margin-left: 50px;
+  border: solid white 3px;
+}
+#spiderman {
+  width: auto;
+  height: 480px;
+  border: solid white 3px;
+}
+#batmanText {
+  display: none;
+}
+#spidermanText {
+  display: none;
+}
+#batman:hover {
+  width: auto;
+  height: 490px;
+  border: solid lightgreen 3px;
+}
+#spiderman:hover {
+  width: auto;
+  height: 490px;
+  border: solid lightgreen 3px;
+}
+a {
+  color: yellow;
 }
