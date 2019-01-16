@@ -1,5 +1,5 @@
 .header {
-  padding: 60px;
+  padding: 30px;
   text-align: left;
   background: #1abc9c;
   color: white;
@@ -7,7 +7,7 @@
 }
 #home {
   float: left;
-  height: 50px;
+  height: 100px;
   width: auto;
 }
 #headerTitle {
