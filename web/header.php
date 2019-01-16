@@ -10,9 +10,11 @@
         <img id="home" src="https://image.flaticon.com/icons/svg/25/25694.svg">
       </a>
       <h1 id="headerTitle">My super cool website</h1>
+      <?php
+        $timeDate = date("h:i:s A, M d, Y");
+        echo "<h1>It is currently $timeDate</h1>";
+      ?>
     </div>
-    <?php
-      $x = 17;
-    ?>
+
   </body>
 </html>
