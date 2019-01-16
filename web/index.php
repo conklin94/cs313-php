@@ -8,7 +8,7 @@
     <h1>Home Page</h1>
     <?php
 
-      phpinfo();
+      $x = 17;
 
     ?>
 </body>
