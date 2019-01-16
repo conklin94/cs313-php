@@ -12,7 +12,7 @@
       <h1 id="headerTitle">My super cool website</h1>
       <?php
         $timeDate = date("M d, Y, h:i:s A");
-        echo "<p>Time: $timeDate</p>";
+        echo "<p id='time'>Server time: $timeDate</p>";
       ?>
     </div>
 
