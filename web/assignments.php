@@ -5,14 +5,13 @@
     <link rel="stylesheet" href="assignments.css">
   </head>
   <body>
+    <?php
+      include 'header.php';
+    ?>
     <h1>Assignment Page</h1>
     <a href="hello.html">Week 1 Assignment</a>
     <br/>
     <a href="index.php">Go Home</a>
-
-    <?php
-      include 'header.php';
-    ?>
     <script src="assignments.js"></script>
 </body>
 </html>

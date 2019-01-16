@@ -5,6 +5,9 @@
     <link rel="stylesheet" href="index.css">
   </head>
   <body>
+    <?php
+      include 'header.php';
+    ?>
     <h1>Home Page</h1>
     <h2>Click an image for more information</h2>
     <img id="batman" onclick="showBatman()" src="https://static.comicvine.com/uploads/original/11130/111300799/5440136-4977858128-batma.jpg" alt="Batman">
@@ -32,9 +35,6 @@
     </div>
     <br>
     <a href="assignments.php">Click here to go to the assignments page</a>
-    <?php
-      include 'header.php';
-    ?>
     <script src="index.js"></script>
   </body>
 </html>
