@@ -7,5 +7,9 @@ if($_GET['user'] == 'admin') {
 } else {
   $_SESSION["user"] = "none";
 }
-header('Location: home.php');
+print_r($_SESSION);
+echo $_SESSION["user"];
+echo $_GET['user'];
+echo htmlspecialchars($_GET['user']);
+//header('Location: home.php');
 ?>

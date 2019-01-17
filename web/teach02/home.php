@@ -13,7 +13,7 @@ session_start();
 </head>
 <body>
     <?php
-      if (!isset($_SESSION['user'])) {
+      if (! isset($_SESSION['user'])) {
         $_SESSION['user'] = 'none';
       }
       include 'header.php';
