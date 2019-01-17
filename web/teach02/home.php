@@ -20,13 +20,15 @@ session_start();
 
       if ($_SESSION["user"] == "admin") {
         echo "<p>Welcome, you are currently logged in as Admin.</p>";
+        echo "<a href='user.php'>Log out</a>";
       } elseif ($_SESSION["user"] == "tester") {
         echo "<p>Welcome. You are currently logged in as a Tester.</p>";
+        echo "<a href='user.php'>Log out</a>";
       } else {
         echo "<p>Welcome. You are not logged in.</p>";
       }
 
     ?>
-    <a href="user.php">Log out</a>
+
     </body>
 </html>
