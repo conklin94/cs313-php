@@ -13,10 +13,11 @@ session_start();
 </head>
 <body>
     <?php
+      include 'header.php';
       /*if (! isset($_SESSION['user'])) {
         $_SESSION['user'] = 'none';
       }
-      include 'header.php';
+
       if ($_SESSION["user"] == "admin") {
         echo "<p>Welcome, you are currently logged in as Admin.</p>"
       } elseif ($_SESSION["user"] == "tester";) {
