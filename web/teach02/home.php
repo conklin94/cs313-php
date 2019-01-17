@@ -24,7 +24,7 @@ session_start();
         echo "<p>Welcome. You are currently logged in as a Tester.</p>";
       } else {
         echo "<p>Welcome. You are not logged in.</p>";
-      }*/
+      }
 
     ?>
     </body>
