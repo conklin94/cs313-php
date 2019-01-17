@@ -12,7 +12,7 @@
     <?php
     include 'header.php';
     ?>
-    <a href="user.php?user='admin'">Log in as Administrator</a>
-    <a href="user.php?user='tester'">Log in as Tester</a>
+    <a href="user.php?user=admin">Log in as Administrator</a>
+    <a href="user.php?user=tester">Log in as Tester</a>
 </body>
 </html>

@@ -13,14 +13,17 @@ session_start();
 </head>
 <body>
     <?php
-    include 'header.php';
-    if ($_SESSION["user"] == "admin") {
-      echo "<p>Welcome, you are currently logged in as Admin.</p>"
-    } elseif ($_SESSION["user"] == "tester";) {
-      echo "<p>Welcome. You are currently logged in as a Tester.</p>"
-    } else {
-      echo "<p>Welcome. You are not logged in.</p>";
-    }
+      if (!isset($_SESSION['user'])) {
+        $_SESSION['user'] = 'none';
+      }
+      include 'header.php';
+      if ($_SESSION["user"] == "admin") {
+        echo "<p>Welcome, you are currently logged in as Admin.</p>"
+      } elseif ($_SESSION["user"] == "tester";) {
+        echo "<p>Welcome. You are currently logged in as a Tester.</p>"
+      } else {
+        echo "<p>Welcome. You are not logged in.</p>";
+      }
 
     ?>
     </body>
