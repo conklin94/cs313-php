@@ -1,8 +1,9 @@
 <?php
 session_start();
-if(htmlspecialchars($_GET['user']) == 'admin') {
+$user = $_GET['user'];
+if($user == 'admin') {
   $_SESSION["user"] = "admin";
-} elseif(htmlspecialchars($_GET['user']) == 'tester') {
+} elseif($user == 'tester') {
   $_SESSION["user"] = "tester";
 } else {
   $_SESSION["user"] = "none";
