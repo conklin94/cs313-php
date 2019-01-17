@@ -2,9 +2,9 @@
 session_start();
 $user = $_GET['user'];
 if($user == 'admin') {
-  $_SESSION["user"] = "admin";
+  $_SESSION["user"] = "'admin'";
 } elseif($user == 'tester') {
-  $_SESSION["user"] = "tester";
+  $_SESSION["user"] = "'tester'";
 } else {
   $_SESSION["user"] = "none";
 }
