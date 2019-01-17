@@ -27,5 +27,6 @@ session_start();
       }
 
     ?>
+    <a href="user.php">Log out</a>
     </body>
 </html>
