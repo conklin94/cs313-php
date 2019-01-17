@@ -14,9 +14,9 @@ session_start();
 <body>
     <?php
       include 'header.php';
-      /*if (! isset($_SESSION['user'])) {
+      if (! isset($_SESSION['user'])) {
         $_SESSION['user'] = 'none';
-      }
+      }/*
 
       if ($_SESSION["user"] == "admin") {
         echo "<p>Welcome, you are currently logged in as Admin.</p>"
