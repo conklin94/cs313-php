@@ -9,6 +9,8 @@ if($user == 'admin') {
   $_SESSION["user"] = "none";
 }
 print_r($_SESSION);
+echo "$user";
+echo "admin";
 echo $_SESSION["user"];
 echo $_GET['user'];
 echo htmlspecialchars($_GET['user']);
