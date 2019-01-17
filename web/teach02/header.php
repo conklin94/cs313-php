@@ -26,7 +26,7 @@ else if ($page == 'home.php') {
     <a href= 'login.php'>Login</a>
     </div>";
 }
-else if ($page == 'TA1login.php') {
+else if ($page == 'login.php') {
     echo "<div>
     <a href= 'about-us.php'>About Us</a>
     <a href= 'home.php'>Home</a>
