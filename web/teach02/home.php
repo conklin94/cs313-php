@@ -13,7 +13,7 @@ session_start();
 </head>
 <body>
     <?php
-      if (! isset($_SESSION['user'])) {
+      /*if (! isset($_SESSION['user'])) {
         $_SESSION['user'] = 'none';
       }
       include 'header.php';
@@ -23,7 +23,7 @@ session_start();
         echo "<p>Welcome. You are currently logged in as a Tester.</p>"
       } else {
         echo "<p>Welcome. You are not logged in.</p>";
-      }
+      }*/
 
     ?>
     </body>
