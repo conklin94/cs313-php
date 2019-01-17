@@ -11,7 +11,7 @@
     <h1>Home Page</h1>
     <h2>Click an image for more information</h2>
     <img id="batman" onclick="showBatman()" src="https://static.comicvine.com/uploads/original/11130/111300799/5440136-4977858128-batma.jpg" alt="Batman">
-    <img id="spiderman" onclick="showSpiderman()"src="https://upload.wikimedia.org/wikipedia/en/2/21/Web_of_Spider-Man_Vol_1_129-1.png" alt="Spiderman">
+    <img id="spiderman" onclick="showSpiderman()" src="https://upload.wikimedia.org/wikipedia/en/2/21/Web_of_Spider-Man_Vol_1_129-1.png" alt="Spiderman">
     <div id="batmanText">
       <h3>Batman is a fictional superhero created by Bob Kane and Bill Finger in 1939.</h3>
       <h3>He first appeared in Detective Comics #27. Batman's story often begins with a</h3>
