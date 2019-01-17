@@ -10,6 +10,7 @@
 </head>
 <body>
     <?php
+    session_start();
     include 'header.php';
     if ($_SESSION["user"] == "admin") {
       echo "<p>Welcome, you are currently logged in as Admin.</p>"
