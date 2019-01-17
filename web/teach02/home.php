@@ -16,12 +16,12 @@ session_start();
       include 'header.php';
       if (! isset($_SESSION['user'])) {
         $_SESSION['user'] = 'none';
-      }/*
+      }
 
       if ($_SESSION["user"] == "admin") {
-        echo "<p>Welcome, you are currently logged in as Admin.</p>"
-      } elseif ($_SESSION["user"] == "tester";) {
-        echo "<p>Welcome. You are currently logged in as a Tester.</p>"
+        echo "<p>Welcome, you are currently logged in as Admin.</p>";
+      } elseif ($_SESSION["user"] == "tester") {
+        echo "<p>Welcome. You are currently logged in as a Tester.</p>";
       } else {
         echo "<p>Welcome. You are not logged in.</p>";
       }*/
