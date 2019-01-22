@@ -6,11 +6,14 @@
     <form action="results.php" method="post">
       Name: <input type="text" name="name"><br>
       Email: <input type="text" name="email"><br>
-      Major:<br>
-      <input type="radio" name="major" value="Computer Science"> Computer Science<br>
-      <input type="radio" name="major" value="Web Design and Development"> Web Design and Development<br>
-      <input type="radio" name="major" value="Computer Information Technology"> Computer Information Technology<br>
-      <input type="radio" name="major" value="Computer Engineering"> Computer Engineering<br>
+      <?php
+        $majors = array("CS"=>"Computer Science", "WDD"=>"Web Design and Development",
+      "CIT"=>"Computer Information Technology", "CE"=>"Computer Engineering")
+      echo "Major:<br>";
+      foreach($majors as $x => $x_value) {
+        echo "<input type='radio' name='major' value='$x'> $x_value<br>";
+      }
+      ?>
       Comments:<br>
       <textarea name="comments" rows="4" cols="50"></textarea><br>
       <input type="checkbox" name="countries[]" value="North America"> North America <br>
