@@ -6,7 +6,7 @@
   </head>
   <body>
     <div id="header">
-      <h1>The Store of Useless Treasures</h1>
+      <h1>Our Random Stuff That Could Be Yours</h1>
       <tr>
         <th><a href="browse.php">Home</a></th>
         <th><a href="view_cart.php">View Cart</a></th>
