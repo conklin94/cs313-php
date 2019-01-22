@@ -3,9 +3,9 @@
   echo "email: <a href='mailto:" . htmlspecialchars($_POST["email"]) . "'>" .
   htmlspecialchars($_POST["email"]) . "</a><br>";
   echo "major: " . htmlspecialchars($_POST["major"]) . "<br>";
-  echo "You have visited:<br>";
   echo "Comments:<br>";
   echo htmlspecialchars($_POST["comments"]) . "<br>";
+  echo "You have visited:<br>";
   $country = array("NA" => "North America", "SA" => "South America",
   "EU" => "Europe", "AS" => "Asia", "AU" => "Australia", "AF" => "Africa",
   "AN" => "Antartica");
