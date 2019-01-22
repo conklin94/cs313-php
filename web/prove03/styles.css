@@ -3,9 +3,3 @@
   border: 1px solid black;
   text-align: center;
 }
-#header, h1 {
-  color: purple;
-}
-#header, tr {
-  text-align: center;
-}

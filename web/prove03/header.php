@@ -4,8 +4,8 @@
     <title>Header</title>
     <link rel="stylesheet" href="styles.css">
   </head>
-  <body>
-    <span id="header">
+  <body id="header">
+    <span>
       <h1>The Store of Useless Treasures</h1>
       <tr>
         <th><a href="browse.php">Home</a></th>
