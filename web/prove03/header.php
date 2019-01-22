@@ -14,13 +14,13 @@
           $view_cart = "";
           $checkout = "";
           if ($current_page == "/prove03/browse.php") {
-            $browse = " style='font-weight:bold;' ";
+            $browse = " style='font-weight:bold;color:blue;' ";
           }
           elseif ($current_page == "/prove03/view_cart.php") {
-            $view_cart = " style='font-weight:bold;' ";
+            $view_cart = " style='font-weight:bold;color:blue;' ";
           }
           elseif ($current_page == "/prove03/checkout.php") {
-            $checkout = " style='font-weight:bold;' ";
+            $checkout = " style='font-weight:bold;color:blue;' ";
           }
           echo "Current Page: $current_page <br>";
           echo "<th><a href='browse.php'" . $browse .">Home</a></th>";
