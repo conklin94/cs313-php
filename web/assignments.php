@@ -11,7 +11,7 @@
     <h1>Assignment Page</h1>
     <a href="hello.html">Week 1 Assignment</a>
     <br/>
-    <a href="/prove03/browse.html">Week 3 Assignment</a>
+    <a href="/prove03/browse.php">Week 3 Assignment</a>
     <br/>
     <script src="assignments.js"></script>
 </body>
