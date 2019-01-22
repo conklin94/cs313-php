@@ -7,5 +7,6 @@
     <?php
       include 'header.php';
      ?>
+     <h1>This is the Checkout page</h1>
   </body>
 </html>
