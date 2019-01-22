@@ -6,3 +6,6 @@
 #header, h1 {
   color: purple;
 }
+#header, tr {
+  text-align: center;
+}
