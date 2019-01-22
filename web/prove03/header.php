@@ -14,18 +14,18 @@
           $view_cart = "";
           $checkout = "";
           if ($current_page == "/prove03/browse.php") {
-            $browse = " style='text-decoration:bold;' ";
+            $browse = " style='font-weight:bold;' ";
           }
-          elseif ($current_page == "/prove03/.php") {
-            $view_cart = " style='text-decoration:bold;' ";
+          elseif ($current_page == "/prove03/view_cart.php") {
+            $view_cart = " style='font-weight:bold;' ";
           }
-          elseif ($current_page == "/prove03/browse.php") {
-            $checkout = " style='text-decoration:bold;' ";
+          elseif ($current_page == "/prove03/checkout.php") {
+            $checkout = " style='font-weight:bold;' ";
           }
           echo "Current Page: $current_page <br>";
-          echo "<th><a href='browse.php'" . $browse .">  Home  </a></th>";
-          echo "<th><a href='view_cart.php'" . $view_cart . ">  View Cart  </a></th>";
-          echo "<th><a href='checkout.php'" . $checkout . ">  Checkout  </a></th>";
+          echo "<th><a href='browse.php'" . $browse .">Home</a></th>";
+          echo "<th><a href='view_cart.php'" . $view_cart . ">View Cart</a></th>";
+          echo "<th><a href='checkout.php'" . $checkout . ">Checkout</a></th>";
         ?>
       </tr>
     </div>
