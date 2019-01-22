@@ -8,7 +8,7 @@
       Email: <input type="text" name="email"><br>
       <?php
         $majors = array("CS"=>"Computer Science", "WDD"=>"Web Design and Development",
-      "CIT"=>"Computer Information Technology", "CE"=>"Computer Engineering")
+      "CIT"=>"Computer Information Technology", "CE"=>"Computer Engineering");
       echo "Major:<br>";
       foreach($majors as $x => $x_value) {
         echo "<input type='radio' name='major' value='$x'> $x_value<br>";
