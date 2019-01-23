@@ -21,6 +21,9 @@
           else {
             $_SESSION['cart'][$name]['quantity'] -= 1;
           }
+          if(empty($_SESSION['cart'])) {
+            unset($_SESSION['cart']);
+          }
         }
       }
 

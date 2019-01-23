@@ -57,6 +57,9 @@
           else {
             $_SESSION['cart'][$names[$remove]]['quantity'] -= 1;
           }
+          if(empty($_SESSION['cart'])) {
+            unset($_SESSION['cart']);
+          }
         }
       }
 
