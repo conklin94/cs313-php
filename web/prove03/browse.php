@@ -13,5 +13,20 @@
        <img src="https://cdn.shopify.com/s/files/1/2256/4721/products/2522R_SIDE_1600x.png?v=1547238423"
        alt="mini-piano">
      </div>
+     <div class="item">
+       <h2>Kaleidoscope</h2>
+       <img src="https://cdn.shopify.com/s/files/1/0130/8502/products/2315WJPG_1_2000x.jpg?v=1485396369"
+       alt="kaleidoscope">
+     </div>
+     <div class="item">
+       <h2>Batman Toothbrush</h2>
+       <img src="https://www.fireflytoothbrush.com/wp-content/uploads/2016/10/92767_BTM_TurboStand_brush.jpg"
+       alt="batman-toothbrush">
+     </div>
+     <div class="item">
+       <h2>Novelty Socks</h2>
+       <img src="https://cdn.shopify.com/s/files/1/0569/1997/products/ozone_socks_WC1247-15_endorphic_palm_580x@2x.jpg?v=1547573919"
+       alt="novelty-socks">
+     </div>
   </body>
 </html>
