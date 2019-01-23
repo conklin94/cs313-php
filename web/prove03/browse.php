@@ -31,7 +31,7 @@
 
       $size = sizeof($names);
 
-     /* if (isset($_POST['add'])) {
+      if (isset($_POST['add'])) {
         $add = $_POST['add'];
         if (isset($_SESSION['cart'])) {
           if (isset($_SESSION['cart'][$names[$add]])) {
@@ -56,7 +56,7 @@
         else {
           $_SESSION['cart'][$names[$remove]]['quantity'] -= 1;
         }
-      }*/
+      }
 
 
 
