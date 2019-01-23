@@ -31,10 +31,10 @@
 
       $size = sizeof($names);
 
-     /* if (is_set($_POST['add'])) {
+     /* if (isset($_POST['add'])) {
         $add = $_POST['add'];
-        if (is_set($_SESSION['cart'])) {
-          if (is_set($_SESSION['cart'][$names[$add]])) {
+        if (isset($_SESSION['cart'])) {
+          if (isset($_SESSION['cart'][$names[$add]])) {
             $_SESSION['cart'][$names[$add]]['quantity'] += 1;
           }
           else {
@@ -47,7 +47,7 @@
           $prices[$add], 'quantity' => 1));
         }
       }
-      elseif (is_set($_POST['remove'])) {
+      elseif (isset($_POST['remove'])) {
         $remove = $_POST['remove'];
         if ($_SESSION['cart'][$names[$remove]]['quantity'] == 1)
         {
@@ -68,7 +68,7 @@
         echo "  <form action='browse.php' method='post'>";
         echo "    <button type='submit' name='add' value='" . $x . "'>
         Add to cart</button>";
-        if (is_set($_SESSION['cart'])) {
+        if (isset($_SESSION['cart']) && isset($_SESSION['cart'][$names[$x]]) {
           echo "    <button type='submit' name='remove' value='" . $x . "'>
           Remove from cart</button>";
         }
