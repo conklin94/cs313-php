@@ -12,7 +12,7 @@
       include 'header.php';
 
       if (isset($_SESSION['cart'])) {
-        echo "<br><br>"
+        echo "<br><br>";
         echo "  <form action='confirmation.php' method='post'>";
         echo "Name: <input type='text' name='name'><br><br>";
         echo "Street Address: <input type='text' name='street_address'><br><br>";
