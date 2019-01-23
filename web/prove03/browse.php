@@ -30,6 +30,7 @@
       11.99, 299.99);
 
       $size = sizeof($names);
+      echo $size;
 
      /* if (is_set($_POST['add'])) {
         $add = $_POST['add'];
