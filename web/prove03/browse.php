@@ -68,7 +68,7 @@
         echo "  <form action='browse.php' method='post'>";
         echo "    <button type='submit' name='add' value='" . $x . "'>
         Add to cart</button>";
-        if (isset($_SESSION['cart']) && isset($_SESSION['cart'][$names[$x]]) {
+        if (isset($_SESSION['cart']) && isset($_SESSION['cart'][$names[$x]])) {
           echo "    <button type='submit' name='remove' value='" . $x . "'>
           Remove from cart</button>";
         }
