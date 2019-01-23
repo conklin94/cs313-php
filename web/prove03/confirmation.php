@@ -7,7 +7,7 @@
     <title>Confirmation Page</title>
     <link rel="stylesheet" href="styles.css">
   </head>
-  <body>
+  <body id="confirmation">
     <?php
       include 'header.php';
       $name = htmlspecialchars($_POST['name']);
@@ -17,10 +17,8 @@
       $zip_code = htmlspecialchars($_POST['zip_code']);
       $total_price = 0;
 
-      echo "<h2>Your Address</h2>";
-      echo "<h3>$name</h3>";
-      echo "<h3>$street_address</h3>";
-      echo "<h3>$city, $state $zip_code</h3>";
+      echo "<h2>Your Address:</h2>";
+      echo "<h3>$name, $_street_address, $city, $state $zip_code</h3><br>";
       if (isset($_SESSION['cart'])) {
         echo "<h2>Your Shopping Cart:</h2>";
         foreach ($_SESSION['cart'] as $key => $value) {
