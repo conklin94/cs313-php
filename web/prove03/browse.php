@@ -8,12 +8,17 @@
     <?php
       include 'header.php';
       $names = array("Mini Piano", "Kaleidoscope", "Batman Toothbrosh",
-      "Novelty Socks");
+      "Novelty Socks", "Frisbee", "Golden Toilet Paper", "Fiddle", "Zebra Hat");
       $images = array("https://cdn.shopify.com/s/files/1/2256/4721/products/2522R_SIDE_1600x.png?v=1547238423",
       "https://cdn.shopify.com/s/files/1/0130/8502/products/2315WJPG_1_2000x.jpg?v=1485396369",
       "https://www.fireflytoothbrush.com/wp-content/uploads/2016/10/92767_BTM_TurboStand_brush.jpg",
-      "https://cdn.shopify.com/s/files/1/0569/1997/products/ozone_socks_WC1247-15_endorphic_palm_580x@2x.jpg?v=1547573919");
-      for ($x = 0; $x < 4; $x++) {
+      "https://cdn.shopify.com/s/files/1/0569/1997/products/ozone_socks_WC1247-15_endorphic_palm_580x@2x.jpg?v=1547573919",
+      "https://images-na.ssl-images-amazon.com/images/I/91x9soGBSsL._SX425_.jpg",
+      "https://i.pinimg.com/originals/bc/28/88/bc28887cf47620b7a843a86f1c74d2b2.jpg",
+      "https://www.twinlakesfiddler.com/s/cc_images/teaserbox_3138691904.jpg?t=1485378816"
+      "https://sep.yimg.com/ay/yhst-43237354811846/zebra-print-velvet-pimp-hat-39.jpg");
+      $size = sizeof($names);
+      for ($x = 0; $x < $size; $x++) {
         echo "<div class='item'>";
         echo "<h2>" . $names[$x] . "</h2>";
         echo "<img src='" . $images[$x] . "' alt='" . $names[$x] . "'>";
