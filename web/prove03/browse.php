@@ -7,8 +7,10 @@
   <body>
     <?php
       include 'header.php';
-      $value = $_POST['add_to_cart'];
-      echo $value;
+      $add = $_POST['add'];
+      $remove = $_POST['remove'];
+      echo "Add $add";
+      echo "Remove $remove";
       $names = array("Mini Piano", "Kaleidoscope", "Batman Toothbrosh",
       "Novelty Socks", "Frisbee", "Golden Toilet Paper", "Fiddle", "Zebra Hat",
       "Clif Bars", "Arcade Machine");
@@ -31,8 +33,10 @@
         echo "  <img src='" . $images[$x] . "' alt='" . $names[$x] . "'>";
         echo "  <p>Price: $" . number_format($prices[$x],2) . "</p>";
         echo "  <form action='browse.php' method='post'>";
-        echo "    <input type='submit' name='add_to_cart' value='add" . $x . "'>";
-        echo "    <input type='submit' name='remove_from_cart' value='remove" . $x . "'>";
+        echo "    <button type='submit' name='add' value='" . $x . "'>
+        Add to cart</button>";
+        echo "    <button type='submit' name='remove' value='" . $x . "'>
+        Remove from cart</button>";
         echo "  </form>";
         echo "</div>";
       }
