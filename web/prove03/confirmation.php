@@ -15,9 +15,9 @@
       $total_price = 0;
 
       echo "<h2>Your Address</h2>";
-      echo "<h3>$name</h3>"
-      echo "<h3>$street_address</h3>"
-      echo "<h3>$city, $state $zip_code</h3>"
+      echo "<h3>$name</h3>";
+      echo "<h3>$street_address</h3>";
+      echo "<h3>$city, $state $zip_code</h3>";
       if (isset($_SESSION['cart'])) {
         echo "<h2>Your Shopping Cart:</h2>";
         foreach ($_SESSION['cart'] as $key => $value) {
