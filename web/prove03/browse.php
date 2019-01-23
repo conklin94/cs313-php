@@ -27,7 +27,7 @@
         echo "<div class='item'>";
         echo "<h2>" . $names[$x] . "</h2>";
         echo "<img src='" . $images[$x] . "' alt='" . $names[$x] . "'>";
-        echo "<p>Price: $" . $prices[$x] . "</p>"
+        echo "<p>Price: $" . $prices[$x] . "</p>";
         echo "</div>";
       }
      ?>
