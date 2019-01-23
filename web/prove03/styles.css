@@ -14,8 +14,8 @@ a {
 }
 .item {
   float: left;
-  margin: 50px;
+  margin: 50px 0px 0px 50px;
   text-align: center;
   border: 2px solid black;
-  padding-bottom: 200px;
+  padding-bottom: 100px;
 }
