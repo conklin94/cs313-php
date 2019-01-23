@@ -27,7 +27,8 @@
           ", Quantity: " . $value['quantity'] . "</h3>";
           $total_price += $value['quantity'] * $value['price'];
         }
-        echo "<h2>The total price is: $total_price</h2>";
+        echo "<h2>The total price is: $" . number_format($total_price,2) . 
+        "</h2>";
       }
     ?>
   </body>

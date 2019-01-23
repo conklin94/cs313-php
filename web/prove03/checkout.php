@@ -20,7 +20,7 @@
         echo "State: <input type='text' name='state'><br><br>";
         echo "Zip Code: <input type='text' name='zip_code'><br><br>";
         echo "<input type='submit' value='Complete Purchase'>";
-        echo "</form>";
+        echo "</form><br>";
         echo "<form action='view_cart.php' method='post'>";
         echo "<input type='submit' value='Return to Cart'>";
         echo "</form>";
