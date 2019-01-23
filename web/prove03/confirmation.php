@@ -1,3 +1,6 @@
+<?php
+  session_start();
+?>
 <!DOCTYPE html>
 <html>
   <head>
@@ -7,11 +10,11 @@
   <body>
     <?php
       include 'header.php';
-      $name = htmlspecialchars($_GET['name']);
-      $street_address = htmlspecialchars($_GET['street_address']);
-      $city = htmlspecialchars($_GET['city']);
-      $state = htmlspecialchars($_GET['state']);
-      $zip_code = htmlspecialchars($_GET['zip_code']);
+      $name = htmlspecialchars($_POST['name']);
+      $street_address = htmlspecialchars($_POST['street_address']);
+      $city = htmlspecialchars($_POST['city']);
+      $state = htmlspecialchars($_POST['state']);
+      $zip_code = htmlspecialchars($_POST['zip_code']);
       $total_price = 0;
 
       echo "<h2>Your Address</h2>";
