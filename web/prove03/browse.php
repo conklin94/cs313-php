@@ -7,6 +7,8 @@
   <body>
     <?php
       include 'header.php';
+      $value = $_POST['add_to_cart'];
+      echo $value;
       $names = array("Mini Piano", "Kaleidoscope", "Batman Toothbrosh",
       "Novelty Socks", "Frisbee", "Golden Toilet Paper", "Fiddle", "Zebra Hat",
       "Clif Bars", "Arcade Machine");
