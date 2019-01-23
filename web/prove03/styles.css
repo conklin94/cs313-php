@@ -13,5 +13,7 @@ a {
   width: 200px;
 }
 .item {
-  border: 1px solid black;
+  margin: 50px;
+  text-align: center;
+  border: 2px solid black;
 }
