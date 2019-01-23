@@ -2,6 +2,7 @@
 <html>
   <head>
     <title>Shopping Cart</title>
+    <link rel="stylesheet" href="styles.css">
   </head>
   <body>
     <?php

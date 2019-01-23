@@ -8,3 +8,10 @@
 a {
   padding: 25px 50px 25px 50px;
 }
+.item, img {
+  height: auto;
+  width: 200px;
+}
+.item {
+  border: 1px solid black;
+}
