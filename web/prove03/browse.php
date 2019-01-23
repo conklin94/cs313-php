@@ -49,12 +49,14 @@
       }
       elseif (isset($_POST['remove'])) {
         $remove = $_POST['remove'];
-        if ($_SESSION['cart'][$names[$remove]]['quantity'] == 1)
-        {
-          unset($_SESSION['cart'][$names[$remove]]);
-        }
-        else {
-          $_SESSION['cart'][$names[$remove]]['quantity'] -= 1;
+        if (isset($_SESSION['cart']) && isset($_SESSION['cart'][$names[$remove]])) {
+          if ($_SESSION['cart'][$names[$remove]]['quantity'] == 1)
+          {
+            unset($_SESSION['cart'][$names[$remove]]);
+          }
+          else {
+            $_SESSION['cart'][$names[$remove]]['quantity'] -= 1;
+          }
         }
       }
 
