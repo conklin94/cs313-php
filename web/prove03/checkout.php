@@ -12,12 +12,13 @@
       include 'header.php';
 
       if (isset($_SESSION['cart'])) {
+        echo "<br><br>"
         echo "  <form action='confirmation.php' method='post'>";
-        echo "Name: <input type='text' name='name'><br>";
-        echo "Street Address: <input type='text' name='street_address'><br>";
-        echo "City: <input type='text' name='city'><br>";
-        echo "State: <input type='text' name='state'><br>";
-        echo "Zip Code: <input type='text' name='zip_code'><br>";
+        echo "Name: <input type='text' name='name'><br><br>";
+        echo "Street Address: <input type='text' name='street_address'><br><br>";
+        echo "City: <input type='text' name='city'><br><br>";
+        echo "State: <input type='text' name='state'><br><br>";
+        echo "Zip Code: <input type='text' name='zip_code'><br><br>";
         echo "<input type='submit'>";
       }
       else {
