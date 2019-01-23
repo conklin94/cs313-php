@@ -16,10 +16,10 @@
         if (isset($_SESSION['cart']) && isset($_SESSION['cart'][$name])) {
           if ($_SESSION['cart'][$name]['quantity'] == 1)
           {
-            unset($_SESSION['cart'][$name);
+            unset($_SESSION['cart'][$name]);
           }
           else {
-            $_SESSION['cart'][$name['quantity'] -= 1;
+            $_SESSION['cart'][$name]['quantity'] -= 1;
           }
         }
       }
