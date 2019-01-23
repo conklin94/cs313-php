@@ -20,11 +20,14 @@
       "https://sep.yimg.com/ay/yhst-43237354811846/zebra-print-velvet-pimp-hat-39.jpg",
       "https://snaxxonline.com/wp-content/uploads/2018/01/Clif-Bar-Chocolate-Chip-1.png",
       "https://cdn.shopify.com/s/files/1/0030/4227/9494/products/pac-man-arcade-machine-01_20895432-a1a4-4bc8-acab-e444c27ec6b4_800x.progressive.jpg?v=1544633761");
+      $prices = $array(49.99, 4.99, 3.99, 9.99, 2.99, 1376899.99, 149.99, 4.99,
+      11.99, 299.99)
       $size = sizeof($names);
       for ($x = 0; $x < $size; $x++) {
         echo "<div class='item'>";
         echo "<h2>" . $names[$x] . "</h2>";
         echo "<img src='" . $images[$x] . "' alt='" . $names[$x] . "'>";
+        echo "<p>Price: $" . $prices[$x] . "</p>"
         echo "</div>";
       }
      ?>
