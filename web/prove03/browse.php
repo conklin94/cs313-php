@@ -15,7 +15,7 @@
       "https://cdn.shopify.com/s/files/1/0569/1997/products/ozone_socks_WC1247-15_endorphic_palm_580x@2x.jpg?v=1547573919",
       "https://images-na.ssl-images-amazon.com/images/I/91x9soGBSsL._SX425_.jpg",
       "https://i.pinimg.com/originals/bc/28/88/bc28887cf47620b7a843a86f1c74d2b2.jpg",
-      "https://www.twinlakesfiddler.com/s/cc_images/teaserbox_3138691904.jpg?t=1485378816"
+      "https://www.twinlakesfiddler.com/s/cc_images/teaserbox_3138691904.jpg?t=1485378816",
       "https://sep.yimg.com/ay/yhst-43237354811846/zebra-print-velvet-pimp-hat-39.jpg");
       $size = sizeof($names);
       for ($x = 0; $x < $size; $x++) {
