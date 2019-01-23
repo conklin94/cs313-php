@@ -25,9 +25,13 @@
       $size = sizeof($names);
       for ($x = 0; $x < $size; $x++) {
         echo "<div class='item'>";
-        echo "<h2>" . $names[$x] . "</h2>";
-        echo "<img src='" . $images[$x] . "' alt='" . $names[$x] . "'>";
-        echo "<p>Price: $" . number_format($prices[$x],2) . "</p>";
+        echo "  <h2>" . $names[$x] . "</h2>";
+        echo "  <img src='" . $images[$x] . "' alt='" . $names[$x] . "'>";
+        echo "  <p>Price: $" . number_format($prices[$x],2) . "</p>";
+        echo "  <form action='browse.php' method='post'>";
+        echo "    <input type='submit' name='add_to_cart' value='add" . $x . "'>";
+        echo "    <input type='submit' name='remove_from_cart' value='remove" . $x . "'>";
+        echo "  </form>";
         echo "</div>";
       }
      ?>
