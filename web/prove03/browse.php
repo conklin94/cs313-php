@@ -68,10 +68,10 @@
         echo "  <form action='browse.php' method='post'>";
         echo "    <button type='submit' name='add' value='" . $x . "'>
         Add to cart</button>";
-        if (is_set($_SESSION['cart']) && is_set($_SESSION['cart'][$names[$x]])) {
+        /*if (is_set($_SESSION['cart']) && is_set($_SESSION['cart'][$names[$x]])) {
           echo "    <button type='submit' name='remove' value='" . $x . "'>
           Remove from cart</button>";
-        }
+        }*/
         echo "  </form>";
         echo "</div>";
       }
