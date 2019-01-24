@@ -28,7 +28,11 @@
           echo "<th><a href='browse.php'" . $browse .">Home</a></th>";
           echo "<th><a href='view_cart.php'" . $view_cart . ">View Cart";
           if (isset($_SESSION['cart'])) {
-            echo "[" . sizeof($_SESSION['cart']) . "]";
+            $quantity = 0;
+            foreach ($_SESSION['cart'] as $key => $value) {
+              $quantity += $value['quantity'];
+            }
+            echo "[$quantity]";
           }
           echo "</a></th>";
           echo "<th><a href='checkout.php'" . $checkout . ">Checkout</a></th>";
