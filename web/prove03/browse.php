@@ -30,7 +30,7 @@
       11.99, 299.99);
 
       $size = sizeof($names);
-
+/*
       if (isset($_POST['add'])) {
         $add = $_POST['add'];
         if (isset($_SESSION['cart'])) {
@@ -61,7 +61,7 @@
             unset($_SESSION['cart']);
           }
         }
-      }
+      }*/
 
 
 
@@ -70,7 +70,7 @@
         echo "  <h2>" . $names[$x] . "</h2>";
         echo "  <img src='" . $images[$x] . "' alt='" . $names[$x] . "'>";
         echo "  <p>Price: $" . number_format($prices[$x],2) . "</p>";
-        echo "  <form action='browse.php' method='post'>";
+        echo "  <form action='add.php' method='post'>";
         echo "    <button type='submit' name='add' value='" . $x . "'>
         Add to cart</button>";
         if (isset($_SESSION['cart']) && isset($_SESSION['cart'][$names[$x]])) {
