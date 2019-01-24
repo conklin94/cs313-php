@@ -9,8 +9,6 @@
   </head>
   <body id="view_cart">
     <?php
-      include 'header.php';
-
       if (isset($_POST['remove'])) {
         $name = $_POST['remove'];
         if (isset($_SESSION['cart']) && isset($_SESSION['cart'][$name])) {
@@ -26,6 +24,7 @@
           }
         }
       }
+      include 'header.php';
 
       if (isset($_SESSION['cart'])) {
         echo "<h1>Your Shopping Cart</h1>";
