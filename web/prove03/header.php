@@ -1,3 +1,6 @@
+<?php
+  session_start();
+?>
 <!DOCTYPE html>
 <html>
   <head>
@@ -23,7 +26,11 @@
             $checkout = " style='font-weight:bold;color:blue;' ";
           }
           echo "<th><a href='browse.php'" . $browse .">Home</a></th>";
-          echo "<th><a href='view_cart.php'" . $view_cart . ">View Cart</a></th>";
+          echo "<th><a href='view_cart.php'" . $view_cart . ">View Cart";
+          if (isset($_SESSION['cart'])) {
+            echo "[" . sizeof($_SESSION['cart']) . "]";
+          }
+          echo "</a></th>";
           echo "<th><a href='checkout.php'" . $checkout . ">Checkout</a></th>";
         ?>
       </tr>
