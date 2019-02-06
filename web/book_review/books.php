@@ -31,7 +31,8 @@
         echo 'Error!: ' . $ex->getMessage();
         die();
       }
-      foreach ($db->query('SELECT book_id, title, author, image_link, description FROM book') as $row)
+      $statement = $db->query('SELECT book_id, title, author, image_link, description FROM book');
+      while ($row = $statement->fetch(PDO::FETCH_ASSOC))
       {
         $book_id = $row['book_id'];
         $count = $db->query('SELECT COUNT(*) FROM vote WHERE book_id = $book_id AND is_up = ''yes''');
