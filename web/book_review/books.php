@@ -35,7 +35,7 @@
       while ($row = $statement->fetch(PDO::FETCH_ASSOC))
       {
         $book_id = $row['book_id'];
-        $count = $db->query('SELECT COUNT(*) FROM vote WHERE book_id = $book_id AND is_up = ''yes''');
+        //$count = $db->query('SELECT COUNT(*) FROM vote WHERE book_id = $book_id AND is_up = ''yes''');
         $title = $row['title'];
         $author = $row['author'];
         $image_link = $row['image_link'];
@@ -45,7 +45,7 @@
         echo "  <img src='$image_link' alt='$title'>";
         echo "  <h4>Written by $author</h4>";
         echo "  <p>$description</p>";
-        echo "  <h4>Rating: $count</h4>";
+        echo "  <h4>Rating: 0</h4>";
         echo "</div>";
       }
     ?>
