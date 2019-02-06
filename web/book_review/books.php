@@ -35,7 +35,8 @@
       while ($row = $statement->fetch(PDO::FETCH_ASSOC))
       {
         $book_id = $row['book_id'];
-        //$count = $db->query('SELECT COUNT(*) FROM vote WHERE book_id = $book_id AND is_up = ''yes''');
+        $count = $db->query('SELECT COUNT(*) FROM vote WHERE book_id = '
+                            + $book_id + ' AND is_up = ''yes''');
         $title = $row['title'];
         $author = $row['author'];
         $image_link = $row['image_link'];
