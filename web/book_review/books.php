@@ -33,7 +33,7 @@
       }
       foreach ($db->query('SELECT book_id, title, author, image_link, description FROM book') as $row)
       {
-        $book_id = $row['book_id']
+        $book_id = $row['book_id'];
         $count = $db->query('SELECT COUNT(*)
                              FROM vote
                              WHERE book_id = $book_id
@@ -51,7 +51,7 @@
         echo "  <img src='$image_link' alt='$title'>";
         echo "  <h4>Written by $author</h4>";
         echo "  <p>$description</p>";
-        echo "  <h4>Rating: $count</h4>"
+        echo "  <h4>Rating: $count</h4>";
         echo "</div>";
       }
     ?>
