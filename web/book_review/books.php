@@ -34,7 +34,7 @@
       foreach ($db->query('SELECT book_id, title, author, image_link, description FROM book') as $row)
       {
         $book_id = $row['book_id'];
-        $count = $db->query('SELECT COUNT(*) FROM vote WHERE book_id = $book_id AND is_up = ''yes''') - $db->query('SELECT COUNT(*) FROM vote WHERE book_id = $book_id AND is_up = ''no''');
+        $count = $db->query('SELECT COUNT(*) FROM vote WHERE book_id = $book_id AND is_up = ''yes''');
         $title = $row['title'];
         $author = $row['author'];
         $image_link = $row['image_link'];
