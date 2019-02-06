@@ -31,11 +31,14 @@
         echo 'Error!: ' . $ex->getMessage();
         die();
       }
-      $statement = $db->query('SELECT book_id, title, author, image_link, description FROM book');
+      $statement = $db->query('SELECT b.title, b.author, b.image_link, b.description,
+                              (SELECT COUNT(*) FROM vote WHERE book_id = b.book_id AND is_up = ''yes'')
+                              - (SELECT COUNT(*) FROM vote WHERE book_id = b.book_id AND is_up = ''no'') AS count
+                               FROM book');
       while ($row = $statement->fetch(PDO::FETCH_ASSOC))
       {
         $book_id = $row['book_id'];
-        $count = $db->query('SELECT COUNT(*) FROM vote');
+        $count = $row['count'];
         $title = $row['title'];
         $author = $row['author'];
         $image_link = $row['image_link'];
