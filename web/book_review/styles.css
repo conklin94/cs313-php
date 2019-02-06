@@ -8,7 +8,10 @@
   height: 400px;
   width: 300px;
   word-wrap: normal;
+  margin-left: 50px;
+  margin-top: 50px;
 }
 .book img {
   height: 200px;
+  text-align: center;
 }
