@@ -10,6 +10,40 @@
   <body>
     <?php
       include 'header.php';
+      try
+      {
+        $dbUrl = getenv('DATABASE_URL');
+
+        $dbOpts = parse_url($dbUrl);
+
+        $dbHost = $dbOpts["host"];
+        $dbPort = $dbOpts["port"];
+        $dbUser = $dbOpts["user"];
+        $dbPassword = $dbOpts["pass"];
+        $dbName = ltrim($dbOpts["path"],'/');
+
+        $db = new PDO("pgsql:host=$dbHost;port=$dbPort;dbname=$dbName", $dbUser, $dbPassword);
+
+        $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+      }
+      catch (PDOException $ex)
+      {
+        echo 'Error!: ' . $ex->getMessage();
+        die();
+      }
+      foreach ($db->query('SELECT title, author, image_link, description FROM book') as $row)
+      {
+        $title = $row['title'];
+        $author = $row['author'];
+        $image_link = $row['image_link'];
+        $description = $row['description'];
+        echo "<div class='book'>";
+        echo "  <h3>$title</h3>";
+        echo "  <img src='$image_link' alt='$title'>";
+        echo "  <h4>Written by $author</h4>";
+        echo "  <p>$description</p>";
+        echo "</div>";
+      }
     ?>
     <h1>This is the Books page</h1>
     <a href='login.php'>Go to login page</a>

@@ -1,5 +1,11 @@
 #header {
   background-color: lightblue;
   text-align: center;
-  color: white;
+}
+.book {
+  border: 1px solid black;
+  float: left;
+}
+.book img {
+  height: 100px;
 }

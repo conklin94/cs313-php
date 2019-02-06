@@ -2,6 +2,8 @@ ALTER TABLE book ALTER COLUMN title TYPE VARCHAR(100);
 
 ALTER TABLE book ALTER COLUMN author TYPE VARCHAR(100);
 
+ALTER TABLE reader ALTER COLUMN password TYPE VARCHAR(60);
+
 INSERT INTO book
 ( title
 , image_link
@@ -292,3 +294,6 @@ ADD UNIQUE (reader_id, book_id);
 
 ALTER TABLE vote
 ADD UNIQUE (reader_id, book_id);
+
+ALTER TABLE reader
+ADD UNIQUE (username);
