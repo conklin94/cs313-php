@@ -31,13 +31,10 @@
         echo 'Error!: ' . $ex->getMessage();
         die();
       }
-      $statement = $db->query('SELECT b.title, b.author, b.image_link, b.description, '
-                              + '(SELECT COUNT(*) FROM vote v WHERE v.book_id = b.book_id AND v.is_up = \'yes\') '
-                              + '- (SELECT COUNT(*) FROM vote v WHERE v.book_id = b.book_id AND v.is_up = \'no\') AS count '
-                              + 'FROM book b');
+      $statement = $db->query('SELECT book_id, title, author, image_link, description FROM book');
       while ($row = $statement->fetch(PDO::FETCH_ASSOC))
       {
-        $count = $row['count'];
+        //$count = $row['count'];
         $title = $row['title'];
         $author = $row['author'];
         $image_link = $row['image_link'];
@@ -47,7 +44,7 @@
         echo "  <img src='$image_link' alt='$title'>";
         echo "  <h4>Written by $author</h4>";
         echo "  <p>$description</p>";
-        echo "  <h4>Rating: $count</h4>";
+        echo "  <h4>Rating: 0</h4>";
         echo "</div>";
       }
     ?>
