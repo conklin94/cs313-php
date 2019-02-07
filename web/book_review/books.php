@@ -37,13 +37,13 @@
         $book_id = $row['$book_id'];
         $count = 0;
         $sub_statement = $db->query('SELECT COUNT(*) as count FROM vote WHERE book_id='
-                                    + $book_id + ' AND id_up=\'yes\'');
+                                    + $book_id + ' AND is_up=\'yes\'');
         while ($row = $sub_statement->fetch(PDO::FETCH_ASSOC))
         {
           $count += $row['count'];
         }
         $sub_statement = $db->query('SELECT COUNT(*) AS count FROM vote WHERE book_id='
-                                     + $book_id + ' AND id_up=\'no\'');
+                                     + $book_id + ' AND is_up=\'no\'');
         while ($row = $sub_statement->fetch(PDO::FETCH_ASSOC))
         {
           $count -= $row['count'];
