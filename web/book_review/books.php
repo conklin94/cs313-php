@@ -32,17 +32,17 @@
         die();
       }
       $statement = $db->query('SELECT b.title, b.author, b.image_link, '
-                              + '(SELECT COUNT(*) FROM vote v'
-                              + ' WHERE v.book_id = b.book_id'
-                              + ' AND is_up=\'yes\') -'
-                              + '(SELECT COUNT(*) FROM vote v'
-                              + ' WHERE v.book_id = b.book_id'
-                              + ' AND is_up=\'no\') AS count,'
+                              //+ '(SELECT COUNT(*) FROM vote v'
+                              //+ ' WHERE v.book_id = b.book_id'
+                              //+ ' AND is_up=\'yes\') -'
+                              //+ '(SELECT COUNT(*) FROM vote v'
+                              //+ ' WHERE v.book_id = b.book_id'
+                              //+ ' AND is_up=\'no\') AS count,'
                               + ' b.description FROM book b');
       while ($row = $statement->fetch(PDO::FETCH_ASSOC))
       {
         //$book_id = $row['book_id'];
-        $count = $row['count'];
+        //$count = $row['count'];
         //$sub_statement = $db->query('SELECT COUNT(*) as count FROM vote WHERE book_id='
         //                            + $book_id + ' AND is_up=\'yes\'');
         //while ($row = $sub_statement->fetch(PDO::FETCH_ASSOC))
@@ -64,7 +64,7 @@
         echo "  <img src='$image_link' alt='$title'>";
         echo "  <h4>Written by $author</h4>";
         echo "  <p>$description</p>";
-        echo "  <h4>Rating: $count</h4>";
+        echo "  <h4>Rating: 0</h4>";
         echo "</div>";
       }
     ?>
