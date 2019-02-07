@@ -34,9 +34,8 @@
       $statement = $db->query('SELECT book_id, title, author, image_link, description FROM book');
       while ($row = $statement->fetch(PDO::FETCH_ASSOC))
       {
-        $book_id = $row['$book_id']
-
-        $count = $db->query('SELECT COUNT(*) FROM vote WHERE book_id=' + $book_id)
+        $book_id = $row['$book_id'];
+        $count = $db->query('SELECT COUNT(*) FROM vote WHERE book_id=' + $book_id);
         $title = $row['title'];
         $author = $row['author'];
         $image_link = $row['image_link'];
