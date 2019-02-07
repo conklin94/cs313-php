@@ -55,10 +55,10 @@
         //{
         //  $count -= $row['count'];
         //}
-        $title = $row['b.title'];
-        $author = $row['b.author'];
-        $image_link = $row['b.image_link'];
-        $description = $row['b.description'];
+        $title = $row['title'];
+        $author = $row['author'];
+        $image_link = $row['image_link'];
+        $description = $row['description'];
         echo "<div class='book'>";
         echo "  <h3>$title</h3>";
         echo "  <img src='$image_link' alt='$title'>";
