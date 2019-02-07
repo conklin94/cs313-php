@@ -31,8 +31,8 @@
         echo 'Error!: ' . $ex->getMessage();
         die();
       }
-      $statement = $db->query('SELECT b.title, b.author, b.image_link,
-                              (SELECT COUNT(*) FROM vote v
+      $statement = $db->query('SELECT b.book_id, b.title, b.author,
+                              b.image_link, (SELECT COUNT(*) FROM vote v
                               WHERE v.book_id = b.book_id
                               AND is_up=\'yes\') -
                               (SELECT COUNT(*) FROM vote v
@@ -41,20 +41,9 @@
                               b.description FROM book b');
       while ($row = $statement->fetch(PDO::FETCH_ASSOC))
       {
-        //$book_id = $row['book_id'];
+        $book_id = $row['book_id'];
         $count = $row['count'];
-        //$sub_statement = $db->query('SELECT COUNT(*) as count FROM vote WHERE book_id='
-        //                            + $book_id + ' AND is_up=\'yes\'');
-        //while ($row = $sub_statement->fetch(PDO::FETCH_ASSOC))
-        //{
-        //  $count += $row['count'];
-        //}
-        //$sub_statement = $db->query('SELECT COUNT(*) AS count FROM vote WHERE book_id='
-        //                             + $book_id + ' AND is_up=\'no\'');
-        //while ($row = $sub_statement->fetch(PDO::FETCH_ASSOC))
-        //{
-        //  $count -= $row['count'];
-        //}
+
         $title = $row['title'];
         $author = $row['author'];
         $image_link = $row['image_link'];
@@ -65,6 +54,10 @@
         echo "  <h4>Written by $author</h4>";
         echo "  <p>$description</p>";
         echo "  <h4>Rating: $count</h4>";
+        echo "  <form action=\"book_reviews.php\" method=\"post\">";
+        echo "    <button type=\"submit\" name=\"book\" value=\"$book_id\">
+        View Book Reviews</button>";
+        echo "  </form>";
         echo "</div>";
       }
     ?>
