@@ -31,27 +31,34 @@
         echo 'Error!: ' . $ex->getMessage();
         die();
       }
-      $statement = $db->query('SELECT book_id, title, author, image_link, description FROM book');
+      $statement = $db->query('SELECT b.title, b.author, b.image_link, '
+                              + '(SELECT COUNT(*) FROM vote v'
+                              + ' WHERE v.book_id = b.book_id'
+                              + ' AND is_up=\'yes\') -'
+                              + '(SELECT COUNT(*) FROM vote v'
+                              + ' WHERE v.book_id = b.book_id'
+                              + ' AND is_up=\'no\') AS count,'
+                              + ' b.description FROM book b');
       while ($row = $statement->fetch(PDO::FETCH_ASSOC))
       {
-        $book_id = $row['$book_id'];
-        $count = 0;
-        $sub_statement = $db->query('SELECT COUNT(*) as count FROM vote WHERE book_id='
-                                    + $book_id + ' AND is_up=\'yes\'');
-        while ($row = $sub_statement->fetch(PDO::FETCH_ASSOC))
-        {
-          $count += $row['count'];
-        }
-        $sub_statement = $db->query('SELECT COUNT(*) AS count FROM vote WHERE book_id='
-                                     + $book_id + ' AND is_up=\'no\'');
-        while ($row = $sub_statement->fetch(PDO::FETCH_ASSOC))
-        {
-          $count -= $row['count'];
-        }
-        $title = $row['title'];
-        $author = $row['author'];
-        $image_link = $row['image_link'];
-        $description = $row['description'];
+        //$book_id = $row['book_id'];
+        $count = $row['count'];
+        //$sub_statement = $db->query('SELECT COUNT(*) as count FROM vote WHERE book_id='
+        //                            + $book_id + ' AND is_up=\'yes\'');
+        //while ($row = $sub_statement->fetch(PDO::FETCH_ASSOC))
+        //{
+        //  $count += $row['count'];
+        //}
+        //$sub_statement = $db->query('SELECT COUNT(*) AS count FROM vote WHERE book_id='
+        //                             + $book_id + ' AND is_up=\'no\'');
+        //while ($row = $sub_statement->fetch(PDO::FETCH_ASSOC))
+        //{
+        //  $count -= $row['count'];
+        //}
+        $title = $row['b.title'];
+        $author = $row['b.author'];
+        $image_link = $row['b.image_link'];
+        $description = $row['b.description'];
         echo "<div class='book'>";
         echo "  <h3>$title</h3>";
         echo "  <img src='$image_link' alt='$title'>";
