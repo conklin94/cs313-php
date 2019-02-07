@@ -31,7 +31,7 @@
         echo 'Error!: ' . $ex->getMessage();
         die();
       }
-      $statement = $db->query('SELECT b.title, b.author, b.image_link, b.description FROM book b');
+      $statement = $db->query('SELECT b.title, b.author, b.image_link, ' + ' b.description FROM book b');
                               //+ '(SELECT COUNT(*) FROM vote v'
                               //+ ' WHERE v.book_id = b.book_id'
                               //+ ' AND is_up=\'yes\') -'
