@@ -21,8 +21,8 @@
                             (SELECT COUNT(*) FROM vote v
                             WHERE v.book_id = b.book_id
                             AND is_up=\'no\') AS count
-                            FROM book b WHERE :search_by LIKE :search');
-      $stmt->execute(array(':search_by' => $search_by, ':search' => $search));
+                            FROM book b');// WHERE :search_by LIKE :search');
+      //$stmt->execute(array(':search_by' => $search_by, ':search' => $search));
       $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
       foreach ($rows as $row) {
         $book_id = $row['book_id'];
