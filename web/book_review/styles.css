@@ -2,12 +2,13 @@
   background-color: #1743A1;
   text-align: center;
   color: white;
-  padding-left: -100px;
-  display: inline;
 }
 #header a img {
   float: left;
   height: 100px;
+}
+#header h1 {
+  display: inline;
 }
 button {
   color: white;
