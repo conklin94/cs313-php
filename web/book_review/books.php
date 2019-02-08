@@ -10,6 +10,9 @@
   <body>
     <?php
       include 'header.php';
+    ?>
+    <a href="add_book.php">Add a book</a>
+    <?php
       require 'db_access.php';
       $db = get_db();
       $statement = $db->query('SELECT b.book_id, b.title, b.author,
@@ -42,6 +45,5 @@
         echo "</div>";
       }
     ?>
-    <a href="add_book.php">Add a book</a>
   </body>
 </html>
