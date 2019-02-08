@@ -1,11 +1,16 @@
 #header {
   background-color: #1743A1;
   color: white;
-  margin-left: 50px;
 }
 #header a img {
   float: left;
   height: 100px;
+}
+#header h1 {
+  margin-left: 100px;
+}
+#header h3 {
+  margin-left: 120px;
 }
 button {
   color: white;
@@ -53,7 +58,7 @@ input[type=password] {
   font-weight: bold;
 }
 #login {
-  margin-left 100px;
+  margin-left: 100px;
 }
 .message {
   background-color: #ED92D6;
