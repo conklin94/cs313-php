@@ -24,8 +24,10 @@
           echo "  </form>";
         }
       ?>
-      <img src="https://cdn2.iconfinder.com/data/icons/blue-round-amazing-icons-1/512/home-alt-512.png"
-      alt="Home Page">
+      <a href="books.php">
+        <img src="https://cdn2.iconfinder.com/data/icons/blue-round-amazing-icons-1/512/home-alt-512.png"
+        alt="Home Page">
+      </a>
     </div>
   </body>
 </html>

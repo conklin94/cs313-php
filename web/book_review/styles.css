@@ -2,8 +2,9 @@
   background-color: lightblue;
   text-align: center;
 }
-#header img {
+#header a img {
   float: left;
+  height: 100px;
 }
 .book {
   border: 1px solid black;
