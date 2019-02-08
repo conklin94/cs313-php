@@ -17,9 +17,13 @@
         echo "<h2>Incorrect username and/or password</h2>";
       }
     ?>
-    <form action="log_in_or_out.php" method="post">
+    <form id="login" action="log_in_or_out.php" method="post">
       Username: <input type="text" name="username"><br>
       Password: <input type="text" name="password"><br>
+      <label for="username">Username</label>
+      <input type="text" name="username">
+      <label for="password">Password</label>
+      <input type="text" name="password">
       <button type="submit" name="login" value="True">Log in</button>
     </form>
 
