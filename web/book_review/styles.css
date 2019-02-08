@@ -77,3 +77,15 @@ button {
 .log {
   display: inline;
 }
+.log button {
+  display: inline;
+}
+.search button {
+  display: inline;
+}
+.search select {
+  display: inline;
+}
+.search input {
+  display: inline;
+}

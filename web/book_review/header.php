@@ -23,7 +23,7 @@
           echo "  </form>";
         }
         elseif (basename($_SERVER['PHP_SELF'])!= 'login.php') {
-          echo "  <form action=\"login.php\" method=\"post\">";
+          echo "  <form class='log' action=\"login.php\" method=\"post\">";
           echo "    <button type=\"submit\">Log in</button>";
           echo "  </form>";
         }
