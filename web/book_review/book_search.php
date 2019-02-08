@@ -20,8 +20,8 @@
                             (SELECT COUNT(*) FROM vote v
                             WHERE v.book_id = b.book_id
                             AND is_up=\'no\') AS count
-                            FROM book b WHERE title LIKE :search
-                            OR author LIKE %:search%');
+                            FROM book b WHERE title LIKE \'%\':search\'%\'
+                            OR author LIKE \'%\':search\'%\'');
       $stmt->execute(array(':search' => $search));
       $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
       foreach ($rows as $row) {
