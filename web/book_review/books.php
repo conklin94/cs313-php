@@ -42,9 +42,5 @@
         echo "</div>";
       }
     ?>
-    <h1>This is the Books page</h1>
-    <a href='login.php'>Go to login page</a>
-    <a href='book_reviews.php'>Go to book review page</a>
-    <a href='add_book.php'>Go to add book page</a>
   </body>
 </html>

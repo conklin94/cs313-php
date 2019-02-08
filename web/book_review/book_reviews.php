@@ -27,6 +27,7 @@
         echo "  <img src='$image_link' alt='$title'>";
         echo "  <h2>Written by $author</h2>";
         echo "  <h4>$description</h4>";
+        echo "  <a href='add_review.php?book_id=$book_id'>Add a review</a>";
         echo "</div>";
       }
       $stmt2 = $db->prepare('SELECT (SELECT username FROM reader rd
@@ -44,7 +45,7 @@
         echo "<div class='review'>";
         echo "  <h4>$stars out of 5 stars</h4>";
         echo "  <p>$comments</p>";
-        echo "  <b>Written on $date by $username</b>";
+        echo "  <h5>Written $date by $username</h5>";
         echo "</div>";
 
       }

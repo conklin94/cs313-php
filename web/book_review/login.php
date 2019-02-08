@@ -10,8 +10,18 @@
   <body>
     <?php
       include 'header.php';
+      $message = htmlspecialchars($_GET['message']);
+      if ($message == 'success') {
+        echo "<h2>You have successfully logged out</h2>";
+      } elseif ($message == 'fail') {
+        echo "<h2>Incorrect username and/or password</h2>";
+      }
     ?>
-    <h1>This is the Login page</h1>
-    <a href='books.php'>Go to main page</a>
+    <form action="log_in_or_out.php" method="post">
+      Username: <input type="text" name="username"><br>
+      Password: <input type="text" name="password"><br>
+      <button type="submit" name="login" value="True">Log in</button>
+    </form>
+
   </body>
 </html>
