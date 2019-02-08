@@ -59,4 +59,7 @@ input[type=password] {
   background-color: #ED92D6;
   border: 0.5px solid black;
   display: inline;
+  padding-left: 30px;
+  padding-right: 30px;
+  margin-bottom: 30px;
 }
