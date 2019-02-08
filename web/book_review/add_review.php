@@ -11,8 +11,8 @@
     <?php
       include 'header.php';
       $book_id = htmlspecialchars($_GET['book_id']);
-      echo "<h1>The book_id is $book_id</h1>";
     ?>
-    <h1>This page is currently under construction, please come back later</h1>
+    <h1>This is the page to add a review</h1>
+    <h2>It is currently under construction, please come back later</h2>
   </body>
 </html>

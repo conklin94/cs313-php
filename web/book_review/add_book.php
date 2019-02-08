@@ -11,7 +11,7 @@
     <?php
       include 'header.php';
     ?>
-    <h1>This is the Add Book page</h1>
-    <a href='books.php'>Go to main page</a>
+    <h1>This is page to add a book</h1>
+    <h2>It is currently under construction, please come back later</h2>
   </body>
 </html>
