@@ -11,7 +11,7 @@
     <?php
       include 'header.php';
     ?>
-    <h2>Login</h2>
+    <h2 class="login">Login</h2>
     <?php
       $message = htmlspecialchars($_GET['message']);
       if ($message == 'success') {
@@ -21,7 +21,7 @@
       }
     ?>
     <br>
-    <form id="login" action="log_in_or_out.php" method="post">
+    <form class="login" action="log_in_or_out.php" method="post">
       <label for="username">Username</label><br>
       <input type="text" name="username"><br>
       <label for="password">Password</label><br>

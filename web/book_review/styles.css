@@ -54,10 +54,10 @@ input[type=password] {
   margin: 8px 0;
   box-sizing: border-box;
 }
-#login label {
+.login label {
   font-weight: bold;
 }
-#login {
+.login {
   margin-left: 100px;
 }
 .message {
