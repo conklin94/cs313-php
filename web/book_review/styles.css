@@ -34,11 +34,11 @@ button {
 .book_review {
   text-align: center;
   border: 1px solid black;
-  padding-bottom: 400px;
+  padding-bottom: 200px;
   height: 600px;
 }
 .book_review img {
-  height: 500px;
+  height: 600px;
 }
 .review {
   text-align: center;
