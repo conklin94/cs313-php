@@ -15,3 +15,14 @@
 .book img {
   height: 200px;
 }
+.book_review {
+  text-align: center;
+  border: 1px solid black;
+}
+.book_review {
+  height: 400px;
+}
+.review {
+  text-align: center;
+  border: 1px solid black;
+}

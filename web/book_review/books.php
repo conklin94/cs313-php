@@ -10,27 +10,8 @@
   <body>
     <?php
       include 'header.php';
-      try
-      {
-        $dbUrl = getenv('DATABASE_URL');
-
-        $dbOpts = parse_url($dbUrl);
-
-        $dbHost = $dbOpts["host"];
-        $dbPort = $dbOpts["port"];
-        $dbUser = $dbOpts["user"];
-        $dbPassword = $dbOpts["pass"];
-        $dbName = ltrim($dbOpts["path"],'/');
-
-        $db = new PDO("pgsql:host=$dbHost;port=$dbPort;dbname=$dbName", $dbUser, $dbPassword);
-
-        $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-      }
-      catch (PDOException $ex)
-      {
-        echo 'Error!: ' . $ex->getMessage();
-        die();
-      }
+      require 'db_access.php';
+      $db = get_db();
       $statement = $db->query('SELECT b.book_id, b.title, b.author,
                               b.image_link, (SELECT COUNT(*) FROM vote v
                               WHERE v.book_id = b.book_id
