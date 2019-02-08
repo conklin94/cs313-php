@@ -15,9 +15,9 @@
     <?php
       $message = htmlspecialchars($_GET['message']);
       if ($message == 'success') {
-        echo "<h3>You have successfully logged out</h3>";
+        echo "<h3 class='message'>You have successfully logged out</h3>";
       } elseif ($message == 'fail') {
-        echo "<h3>Incorrect username and/or password</h3>";
+        echo "<h3 class='message'>Incorrect username and/or password</h3>";
       }
     ?>
     <br>

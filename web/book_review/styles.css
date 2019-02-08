@@ -55,3 +55,8 @@ input[type=password] {
 #login label {
   font-weight: bold;
 }
+.message {
+  background-color: #ED92D6;
+  border: 0.5px solid black;
+  color: red;
+}
