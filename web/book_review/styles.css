@@ -1,6 +1,7 @@
 #header {
   background-color: #1743A1;
   color: white;
+  margin-left: 50px;
 }
 #header a img {
   float: left;
@@ -29,8 +30,6 @@ button {
   text-align: center;
   border: 1px solid black;
   padding-bottom: 400px;
-}
-.book_review {
   height: 400px;
 }
 .review {
@@ -52,6 +51,9 @@ input[type=password] {
 }
 #login label {
   font-weight: bold;
+}
+#login {
+  margin-left 100px;
 }
 .message {
   background-color: #ED92D6;

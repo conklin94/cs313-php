@@ -50,8 +50,5 @@
 
       }
     ?>
-    <h1>This is the Book Review page</h1>
-    <a href='add_review.php'>Go to add review page</a>
-    <a href='books.php'>Go to main page</a>
   </body>
 </html>
