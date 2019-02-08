@@ -58,5 +58,6 @@ input[type=password] {
 .message {
   background-color: #ED92D6;
   border: 0.5px solid black;
-  color: red;
+  margin-left: 100px;
+  margin-right: 100px;
 }
