@@ -1,5 +1,5 @@
 #header {
-  background-color: blue;
+  background-color: #1743A1;
   text-align: center;
   color: white;
 }
@@ -9,7 +9,7 @@
 }
 button {
   color: white;
-  background-color: blue;
+  background-color: #1743A1;
 }
 .book {
   border: 1px solid black;
