@@ -28,7 +28,7 @@
           echo "  </form>";
         }
       ?>
-      <form action="book_search.php" method="post">
+      <form class="search" action="book_search.php" method="post">
         <select name="search_by">
           <option value="title">Title</option>
           <option value="author">Author</option>
