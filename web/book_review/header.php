@@ -9,6 +9,10 @@
   </head>
   <body>
     <div id='header'>
+      <a href="books.php">
+        <img src="https://cdn2.iconfinder.com/data/icons/blue-round-amazing-icons-1/512/home-alt-512.png"
+        alt="Home Page">
+      </a>
       <h1>Book Reviewer</h1>
       <h3>A place to find books to read and rate books you've read</h3>
       <?php
@@ -24,10 +28,6 @@
           echo "  </form>";
         }
       ?>
-      <a href="books.php">
-        <img src="https://cdn2.iconfinder.com/data/icons/blue-round-amazing-icons-1/512/home-alt-512.png"
-        alt="Home Page">
-      </a>
     </div>
   </body>
 </html>
