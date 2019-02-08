@@ -12,7 +12,7 @@
       include 'header.php';
       require 'db_access.php';
       $db = get_db();
-      $search = "%" + htmlspecialchars($_POST['search']) + "%";
+      $search = htmlspecialchars($_POST['search']);
       $stmt = $db->prepare('SELECT b.book_id, b.title, b.author, b.image_link,
                             b.description, (SELECT COUNT(*) FROM vote v
                             WHERE v.book_id = b.book_id
@@ -21,7 +21,7 @@
                             WHERE v.book_id = b.book_id
                             AND is_up=\'no\') AS count
                             FROM book b WHERE title LIKE :search
-                            OR author LIKE :search');
+                            OR author LIKE %:search%');
       $stmt->execute(array(':search' => $search));
       $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
       foreach ($rows as $row) {
