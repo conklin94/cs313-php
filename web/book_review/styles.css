@@ -3,6 +3,7 @@
   text-align: center;
   color: white;
   padding-left: -100px;
+  display: inline;
 }
 #header a img {
   float: left;
