@@ -10,7 +10,7 @@
   <body>
     <?php
       include 'header.php';
-      $require 'db_access.php';
+      require 'db_access.php';
       $db = get_db();
       $book_id = $_POST['book'];
       $stmt = $db->prepare('SELECT title, author, image_link, description
