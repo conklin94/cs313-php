@@ -35,6 +35,9 @@ button {
   text-align: center;
   border: 1px solid black;
   padding-bottom: 400px;
+  height: 800px;
+}
+.book_review img {
   height: 400px;
 }
 .review {
