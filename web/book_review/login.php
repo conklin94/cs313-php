@@ -10,11 +10,14 @@
   <body>
     <?php
       include 'header.php';
+    ?>
+    <h2>Login</h2>
+    <?php
       $message = htmlspecialchars($_GET['message']);
       if ($message == 'success') {
-        echo "<h2>You have successfully logged out</h2>";
+        echo "<h3>You have successfully logged out</h3>";
       } elseif ($message == 'fail') {
-        echo "<h2>Incorrect username and/or password</h2>";
+        echo "<h3>Incorrect username and/or password</h3>";
       }
     ?>
     <br>

@@ -53,6 +53,5 @@ input[type=password] {
   box-sizing: border-box;
 }
 #login label {
-  text-align: left;
   font-weight: bold;
 }
