@@ -1,14 +1,10 @@
 #header {
   background-color: #1743A1;
-  text-align: center;
   color: white;
 }
 #header a img {
   float: left;
   height: 100px;
-}
-#header h1 {
-  display: inline;
 }
 button {
   color: white;
@@ -41,9 +37,6 @@ button {
   text-align: center;
   border: 1px solid black;
   margin-top: 50px;
-}
-body {
-  text-align: center;
 }
 input[type=text] {
   width: 50%;
