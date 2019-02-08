@@ -35,10 +35,10 @@ button {
   text-align: center;
   border: 1px solid black;
   padding-bottom: 400px;
-  height: 800px;
+  height: 600px;
 }
 .book_review img {
-  height: 400px;
+  height: 500px;
 }
 .review {
   text-align: center;
