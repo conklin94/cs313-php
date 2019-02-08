@@ -19,9 +19,9 @@
     ?>
     <br>
     <form id="login" action="log_in_or_out.php" method="post">
-      <h3>Username</h3><br>
+      <label for="username">Username</label><br>
       <input type="text" name="username"><br>
-      <h3>Password</h3><br>
+      <label for="password">Password</label><br>
       <input type="password" name="password"><br>
       <button type="submit" name="login" value="True">Log in</button>
     </form>
