@@ -18,7 +18,7 @@
 .book_review {
   text-align: center;
   border: 1px solid black;
-  height: 700px;
+  padding-bottom: 400px;
 }
 .book_review {
   height: 400px;
