@@ -11,7 +11,6 @@
     <?php
       include 'header.php';
     ?>
-    <a href="add_book.php">Add a book</a>
     <?php
       require 'db_access.php';
       $db = get_db();
@@ -45,5 +44,6 @@
         echo "</div>";
       }
     ?>
+    <a id='add_book' href="add_book.php">Add a book</a>
   </body>
 </html>
