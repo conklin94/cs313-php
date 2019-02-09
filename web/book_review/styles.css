@@ -87,3 +87,9 @@ button {
 .search input {
   display: inline;
 }
+#add_book {
+  float: left;
+  display: inline;
+  color: white;
+  background-color: #1743A1;
+}
