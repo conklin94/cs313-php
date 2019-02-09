@@ -17,7 +17,7 @@
       <h3>A place to find books to read and rate books you've read</h3>
       <?php
         if (isset($_SESSION['logged_in'])) {
-          echo "  <form action=\"log_in_or_out.php\" method=\"post\">";
+          echo "  <form class='log' action=\"log_in_or_out.php\" method=\"post\">";
           echo "    <button type=\"submit\" name=\"login\" value=\"False\">
           Log out</button>";
           echo "  </form>";
