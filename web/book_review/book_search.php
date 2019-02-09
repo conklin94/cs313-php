@@ -26,7 +26,7 @@
       $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
       foreach ($rows as $row) {
         $book_id = $row['book_id'];
-        $cout = $row['count'];
+        $count = $row['count'];
         $title = $row['title'];
         $author = $row['author'];
         $image_link = $row['image_link'];
