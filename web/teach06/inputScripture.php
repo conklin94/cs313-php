@@ -18,8 +18,10 @@
        {
          $id = $row['id'];
          $name = $row['name'];
-         echo "<input type='checkbox' name='topics[]' value='$id'>$name<br/>";
+         echo "<input type='checkbox' name='topics[]' value='$id'>$name<br>";
        }
+       echo "<input type='checkbox' name='topic' value='yes'>";
+       echo "<input type='text' name='new_topic'><br>";
       ?>
      <input type="submit">
    </form>
