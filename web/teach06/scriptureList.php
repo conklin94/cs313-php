@@ -16,13 +16,14 @@
          $chapter = $row['chapter'];
          $verse = $row['verse'];
          echo "<h1>$book $chapter:$verse</h1>";
-         $stmt = $db->prepare('SELECT topic_id FROM Scripture_Topic
+         $stmt = $db->prepare('SELECT (SELECT name FROM Topic WHERE id = st.topic_id) AS name
+                               FROM Scripture_Topic st
                                WHERE scripture_id = :scripture_id');
          $stmt->execute(array(':scripture_id' => $scripture_id));
          $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
          echo "<ul>";
          foreach ($rows as $row2) {
-           $name = $row2['topic_id'];
+           $name = $row2['name'];
            echo "<li>$name</li>";
          }
          echo "</ul>";
