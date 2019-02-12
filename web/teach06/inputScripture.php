@@ -10,7 +10,7 @@
      Book: <input type="text" name="book"><br>
      Chapter: <input type="text" name="chapter"><br>
      Verse: <input type="text" name="verse"><br>
-     Content: <textarea rows="4" cols="50" name="content"></textarea>
+     Content: <textarea rows="4" cols="50" name="content"></textarea><br>
      <?php
        $db = get_db();
        $statement = $db->query('SELECT id, name FROM Topic');
