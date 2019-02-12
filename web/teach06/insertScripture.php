@@ -8,10 +8,6 @@
   $topics = htmlspecialchars($_POST['topics']);
 
   try {
-    $stmt = $db->prepare('INSERT INTO Scriptures (book, chapter, verse, content)
-                          VALUES (:book, :chapter, :verse, :content)');
-    $stmt->execute(array(':book' => $book, ':chapter' => $chapter,
-                         ':verse' => $verse, ':content' => $content));
     if ($_POST['topic'] == 'yes') {
       $name = htmlspecialchars($_POST['new_topic']);
       $stmt = $db->prepare('INSERT INTO Topic (name)
@@ -20,6 +16,10 @@
       $newId = $db->lastInsertId('topic_id_seq');
       array_push($topics, $newId);
     }
+    $stmt = $db->prepare('INSERT INTO Scriptures (book, chapter, verse, content)
+                          VALUES (:book, :chapter, :verse, :content)');
+    $stmt->execute(array(':book' => $book, ':chapter' => $chapter,
+                         ':verse' => $verse, ':content' => $content));
     foreach ($topics as $topic) {
       $stmt2 = $db->prepare('INSERT INTO Scripture_Topic (scripture_id, topic_id)
                             VALUES (:scripture_id, :topic_id)');
