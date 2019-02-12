@@ -14,7 +14,7 @@
                             VALUES (:name)');
       $stmt->execute(array(':name' => $name));
       $newId = $db->lastInsertId('topic_id_seq');
-      array_push($topics, $newId);
+      $topics[] =  $newId;
     }
     $stmt = $db->prepare('INSERT INTO Scriptures (book, chapter, verse, content)
                           VALUES (:book, :chapter, :verse, :content)');
