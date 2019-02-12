@@ -21,10 +21,10 @@
       array_push($topics, $newId);
     }
     foreach ($topics as $topic) {
-      $stmt = $db->prepare('INSERT INTO Scripture_Topic (scripture_id, topic_id)
+      $stmt2 = $db->prepare('INSERT INTO Scripture_Topic (scripture_id, topic_id)
                             VALUES (:scripture_id, :topic_id)');
       $newId = $db->lastInsertId('scriptures_id_seq');
-      $stmt->execute(array(':scripture_id' => $newId, ':topic_id' => $topic));
+      $stmt2->execute(array(':scripture_id' => $newId, ':topic_id' => $topic));
     }
 
   }
