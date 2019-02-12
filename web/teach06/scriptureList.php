@@ -20,12 +20,12 @@
                                VALUES (:book, :chapter, :verse, :content)');
          $stmt->execute(array(':id' => $id);
          $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
-         echo "<ul>"
+         echo "<ul>";
          foreach ($rows as $row2) {
            $name = $row2['name'];
            echo "<li>$name</li>";
          }
-         echo "</ul>"
+         echo "</ul>";
        }
   ?>
 
