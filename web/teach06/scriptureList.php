@@ -18,7 +18,7 @@
          echo "<h1>$book $chapter:$verse</h1>";
          $stmt = $db->prepare('SELECT topic_id FROM Scripture_Topic
                                WHERE scripture_id = :scripture_id');
-         $stmt->execute(array(':scripture_id' => $scripture_id);
+         $stmt->execute(array(':scripture_id' => $scripture_id));
          $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
          echo "<ul>";
          foreach ($rows as $row2) {
