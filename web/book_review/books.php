@@ -41,6 +41,11 @@
         echo "    <button type=\"submit\" name=\"book\" value=\"$book_id\">
         View Book Reviews</button>";
         echo "  </form>";
+        echo "  <form action='vote.php' method='post'>";
+        echo "  <button type='submit' name='vote' value='up'>Vote Up</button>";
+        echo "  <button type='submit' name='vote' value='down'>Vote Down";
+        echo "</button>";
+        echo "  </form>";
         echo "</div>";
       }
     ?>
