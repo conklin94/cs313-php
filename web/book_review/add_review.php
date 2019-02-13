@@ -19,7 +19,7 @@
         $stmt = $db->prepare('SELECT title FROM book WHERE book_id=:book_id');
         $stmt->execute(array(':book_id' => $book_id));
         $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
-        for ($rows as $row)
+        foreach ($rows as $row)
         {
           $book = $row['title'];
         }
