@@ -28,7 +28,7 @@
       }
       else
       {
-        echo "<h1 class='add_book'>You must be logged in to add a book.</h1>";
+        header("Location: login.php?message=login", true, 301);
       }
     ?>
   </body>

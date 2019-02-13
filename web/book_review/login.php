@@ -18,6 +18,8 @@
         echo "<h3 class='message'>You have successfully logged out</h3>";
       } elseif ($message == 'fail') {
         echo "<h3 class='message'>Incorrect username and/or password</h3>";
+      } elseif ($message == 'login') {
+        echo "<h3 class='message'>You must log in to perform this action</h3>";
       }
     ?>
     <br>

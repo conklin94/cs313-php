@@ -43,8 +43,7 @@
       }
       else
       {
-        echo "<h1 class='add_review'>";
-        echo "You must be logged in to add a book review.</h1>";
+        header("Location: login.php?message=login", true, 301);
       }
     ?>
   </body>
