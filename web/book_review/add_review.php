@@ -43,7 +43,8 @@
       }
       else
       {
-        echo "<h1>You must be logged in to add a book review.</h1>";
+        echo "<h1 class='add_review'>";
+        echo "You must be logged in to add a book review.</h1>";
       }
     ?>
   </body>

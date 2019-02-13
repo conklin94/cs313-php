@@ -28,7 +28,7 @@
       }
       else
       {
-        echo "<h1>You must be logged in to add a book.</h1>";
+        echo "<h1 class='add_book'>You must be logged in to add a book.</h1>";
       }
     ?>
   </body>
