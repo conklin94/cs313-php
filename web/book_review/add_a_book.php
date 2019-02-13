@@ -7,9 +7,21 @@
   $image_link = htmlspecialchars($_POST['image_link']);
   $description = htmlspecialchars($_POST['description']);
   $created_by = $_SESSION['logged_in'];
-  echo "Title: $title";
-  echo "Author: $author";
-  echo "Image Link: $image_link";
-  echo "Description: $description";
-  echo "Created by: $created_by";
+  try
+  {
+    $stmt = $db->prepare('INSERT INTO book (title, image_link, description,
+                                            author, created_by, creation_date)
+                          VALUES (:title, :image_link, :description, :author,
+                                  (SELECT reader_id FROM reader
+                                   WHERE username = :created_by),
+                                   current_date)');
+    $stmt->execute(array(':title' => $title, ':image_link' => $image_link,
+                         ':description' => $description, ':author' => $author,
+                         ':created_by' => $created_by));
+    header("Location: books.php", true, 301);
+  }
+  catch (Exception $e)
+  {
+    echo 'Exception caught:',  $e->getMessage(), "\n";
+  }
 ?>

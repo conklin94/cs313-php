@@ -12,7 +12,7 @@
       include 'header.php';
       require 'db_access.php';
       $db = get_db();
-      $book_id = $_POST['book'];
+      $book_id = htmlspecialchars($_GET['book']);
       $stmt = $db->prepare('SELECT title, author, image_link, description
                             FROM book WHERE book_id=:book_id');
       $stmt->execute(array(':book_id' => $book_id));

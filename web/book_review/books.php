@@ -37,7 +37,7 @@
         echo "  <h4>Written by $author</h4>";
         echo "  <p>$description</p>";
         echo "  <h4>Rating: $count</h4>";
-        echo "  <form action=\"book_reviews.php\" method=\"post\">";
+        echo "  <form action=\"book_reviews.php\" method=\"get\">";
         echo "    <button type=\"submit\" name=\"book\" value=\"$book_id\">
         View Book Reviews</button>";
         echo "  </form>";
