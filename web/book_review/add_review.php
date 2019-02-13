@@ -24,7 +24,7 @@
           $book = $row['title'];
         }
         $_SESSION['book_id'] = $book_id;
-        echo "<h1 class='add_revies'>Add a Book Review for $book</h1>";
+        echo "<h1 class='add_review'>Add a Book Review for $book</h1>";
         echo "<form class='add_review' action='add_a_review.php'";
         echo " method='post'>";
         echo "  <label for='stars'>Number of Stars</label><br>";
@@ -36,7 +36,7 @@
         }
         echo "  </select><br>";
         echo "  <label for='comments'>Comments</label><br>";
-        echo "  <textarea rows='4' cols='50' name='comments'></textarea><br>";
+        echo "  <textarea rows='5' cols='100' name='comments'></textarea><br>";
         echo "  <button type='submit'>Add Review</button>";
         echo "</form>";
       }
