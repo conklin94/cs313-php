@@ -12,7 +12,7 @@
       include 'header.php';
       if (isset($_SESSION['logged_in']))
       {
-        echo "<h1>Add a Book</h1>";
+        echo "<h1 class='add_book'>Add a Book</h1>";
         echo "<form class='add_book' action='add_a_book.php' method='post'>";
         echo "  <label for='title'>Title</label><br>";
         echo "  <input type='text' name='title'><br>";
