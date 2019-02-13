@@ -10,7 +10,7 @@
   <body>
     <?php
       include 'header.php';
-      require 'db_access';
+      require 'db_access.php';
       $book_id = htmlspecialchars($_GET['book_id']);
       if (isset($_SESSION['logged_in']))
       {
