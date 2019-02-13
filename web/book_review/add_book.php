@@ -21,7 +21,8 @@
         echo "  <label for='image_link'>Image Link</label><br>";
         echo "  <input type='text' name='image_link'><br>";
         echo "  <label for='description'>Description</label><br>";
-        echo "  <textarea rows='4' cols='50' name='description'></textarea><br>";
+        echo "  <textarea rows='5' cols='100' name='description'></textarea>";
+        echo "  <br><br>";
         echo "  <button type='submit'>Add Book</button>";
         echo "</form>";
       }

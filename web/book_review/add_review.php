@@ -34,9 +34,10 @@
           $current = $x * 0.5;
           echo "    <option value='$current'>$current</option>";
         }
-        echo "  </select><br>";
+        echo "  </select><br><br>";
         echo "  <label for='comments'>Comments</label><br>";
         echo "  <textarea rows='5' cols='100' name='comments'></textarea><br>";
+        echo "  <br>";
         echo "  <button type='submit'>Add Review</button>";
         echo "</form>";
       }
