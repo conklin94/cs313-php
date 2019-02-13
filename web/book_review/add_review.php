@@ -24,7 +24,7 @@
           $book = $row['title'];
         }
         $_SESSION['book_id'] = $book_id;
-        echo "<h1>Add a Book Review for $book</h1>"
+        echo "<h1>Add a Book Review for $book</h1>";
         echo "<form class='add_book_review' action='add_a_review.php'";
         echo " method='post'>";
         echo "  <label for='stars'>Number of Stars</label><br>";
@@ -42,7 +42,7 @@
       }
       else
       {
-        echo "<h1>You must be logged in to add a book review.</h1>"
+        echo "<h1>You must be logged in to add a book review.</h1>";
       }
     ?>
   </body>
