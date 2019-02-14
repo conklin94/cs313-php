@@ -10,7 +10,7 @@
   <body>
     <?php
       include 'header.php';
-      if (isset($_GET['message2']))
+      if (isset($_GET['message']))
       {
         $message = $_GET['message'];
         if ($message == 'vote')
@@ -19,7 +19,7 @@
         }
         elseif ($message == 'book')
         {
-          echo "<h3 class='message'>There was an error when trying to add the";
+          echo "<h3 class='message2'>There was an error when trying to add the";
           echo " book. When adding a book make sure every field is filled in ";
           echo "and the book is not already listed.</h3>";
         }
