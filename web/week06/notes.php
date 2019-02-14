@@ -30,5 +30,6 @@ $course = $statement->fetch(PDO::FETCH_ASSOC);
   <input type="submit" value="insert_note">
 </form>
 
+
   </body>
 </html>
