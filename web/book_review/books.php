@@ -72,6 +72,7 @@
       }
     ?>
     </div>
+    <br>
     <a id='add_book' href="add_book.php">Add a book</a>
   </body>
 </html>
