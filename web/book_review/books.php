@@ -13,6 +13,7 @@
       if (isset($_GET['message']))
       {
         $message = $_GET['message'];
+        echo "<br>";
         if ($message == 'vote')
         {
           echo "<h3 class='message2'>Each user can only vote once per book</h3>";
