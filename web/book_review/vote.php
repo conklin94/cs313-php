@@ -23,6 +23,7 @@
       $stmt->execute(array(':username' => $username, ':book_id' => $book_id,
                            ':is_up' => $is_up));
       header("Location: books.php", true, 301);
+    }
     catch (Exception $e)
     {
       echo 'Exception caught:',  $e->getMessage(), "\n";
