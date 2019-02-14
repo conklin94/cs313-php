@@ -42,8 +42,8 @@
         View Book Reviews</button>";
         echo "  </form>";
         echo "  <form action='vote.php' method='post'>";
-        echo "  <button type='submit' name='vote' value='up'>Vote Up</button>";
-        echo "  <button type='submit' name='vote' value='down'>Vote Down";
+        echo "  <button type='submit' name='up' value='$book_id'>Vote Up</button>";
+        echo "  <button type='submit' name='down' value='$book_id'>Vote Down";
         echo "</button>";
         echo "  </form>";
         echo "</div>";
