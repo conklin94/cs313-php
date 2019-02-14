@@ -19,6 +19,7 @@
   }
   catch (Exception $e)
   {
-    echo 'Exception caught:',  $e->getMessage(), "\n";
+    $message = htmlspecialchars($e->getMessage());
+    header("Location: books.php?message=$message", true, 301);
   }
 ?>

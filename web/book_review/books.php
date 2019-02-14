@@ -10,6 +10,18 @@
   <body>
     <?php
       include 'header.php';
+      if (isset($_GET['message']))
+      {
+        $message = $_GET['message'];
+        if ($message == 'vote')
+        {
+          echo "<h3 class='message'>Each user can only vote once per book</h3>";
+        }
+        else
+        {
+          echo "<h3 class='message'>Error: $message</h3>";
+        }
+      }
     ?>
     <?php
       require 'db_access.php';

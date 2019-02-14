@@ -29,7 +29,7 @@
     }
     catch (Exception $e)
     {
-      echo 'Exception caught:',  $e->getMessage(), "\n";
+      header("Location: books.php?message=vote", true, 301);
     }
   }
   else
