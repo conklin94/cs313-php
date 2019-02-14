@@ -12,7 +12,7 @@
       include 'header.php';
       if (isset($_GET['message']))
       {
-        $message = $_GET['message'];
+        $message = htmlspecialchars($_GET['message']);
         echo "<br>";
         if ($message == 'vote')
         {
