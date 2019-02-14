@@ -4,14 +4,17 @@
   if (isset($_SESSION['logged_in']))
   {
     $username = $_SESSION['logged_in'];
+    $book_id = 0;
     $is_up = NULL;
     if (isset($_POST['up']))
     {
       $is_up = True;
+      $book_id = $_POST['up'];
     }
     elseif (isset($_POST['down']))
     {
       $is_up = False;
+      $book_id = $_POST['down'];
     }
     $db = get_db();
     try {
