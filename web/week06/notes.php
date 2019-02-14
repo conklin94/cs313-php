@@ -20,7 +20,7 @@ $course = $statement->fetch(PDO::FETCH_ASSOC);
 <?php
   $course_name = $course['name'];
   $course_code = $course['course_code'];
-  echo "<h1> Notes for $course_code - $course_name</h1>";
+  echo "<h1> Notes for course: $course_code - $course_name</h1>";
 ?>
 
 <form action="insert_note.php" method="post">
