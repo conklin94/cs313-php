@@ -10,16 +10,24 @@
   <body>
     <?php
       include 'header.php';
-      if (isset($_GET['message']))
+      if (isset($_GET['message2']))
       {
         $message = $_GET['message'];
         if ($message == 'vote')
         {
-          echo "<h3 class='message'>Each user can only vote once per book</h3>";
+          echo "<h3 class='message2'>Each user can only vote once per book</h3>";
         }
-        else
+        elseif ($message == 'book')
         {
-          echo "<h3 class='message'>Error: $message</h3>";
+          echo "<h3 class='message'>There was an error when trying to add the";
+          echo " book. When adding a book make sure every field is filled in ";
+          echo "and the book is not already listed.</h3>";
+        }
+        elseif ($message == 'review')
+        {
+          echo "<h3 class='message2'>There was an error when trying to add the";
+          echo " review. Each user can only add a review for a given book";
+          echo " once</h3>";
         }
       }
     ?>
@@ -34,6 +42,7 @@
                               WHERE v.book_id = b.book_id
                               AND is_up=\'no\') AS count,
                               b.description FROM book b');
+      echo "<div id='book_container'>";
       while ($row = $statement->fetch(PDO::FETCH_ASSOC))
       {
         $book_id = $row['book_id'];
@@ -61,6 +70,7 @@
         echo "</div>";
       }
     ?>
+    </div>
     <a id='add_book' href="add_book.php">Add a book</a>
   </body>
 </html>

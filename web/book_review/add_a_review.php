@@ -19,7 +19,6 @@
   }
   catch (Exception $e)
   {
-    $message = htmlspecialchars($e->getMessage());
-    header("Location: books.php?message=$message", true, 301);
+    header("Location: books.php?message=review", true, 301);
   }
 ?>
