@@ -23,6 +23,9 @@
       header("Location: login.php?message=success", true, 301);
       exit();
     }
+    else {
+      header("Location: login.php", true, 301);
+    }
   }
 
 ?>
