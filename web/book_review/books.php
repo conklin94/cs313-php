@@ -43,7 +43,7 @@
                               WHERE v.book_id = b.book_id
                               AND is_up=\'no\') AS count,
                               b.description FROM book b
-                              ORDER BY count');
+                              ORDER BY count ASC');
       echo "<div id='book_container'>";
       while ($row = $statement->fetch(PDO::FETCH_ASSOC))
       {
