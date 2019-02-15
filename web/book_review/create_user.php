@@ -20,7 +20,7 @@ try {
                                            email, password)
                         VALUES (:username, :first_name, :last_name, :email,
                                 :password)');
-  $stmt->execute(array(':email' => $email, ':first_name' => $first_name,
+  $stmt->execute(array(':username' => $username, ':first_name' => $first_name,
                        ':last_name' => $last_name, 'email' => $email,
                        ':password' => $password1));
   header("Location: login.php?message=user");
