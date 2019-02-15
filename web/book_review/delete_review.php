@@ -15,7 +15,7 @@ try {
   die();
 }
 catch (Exception $e) {
-  header("Location: book_reviews.php?book=$book_id");
+  echo "Error: " . $e->getMessage();
   die();
 }
 
