@@ -27,8 +27,9 @@ try {
   die();
 }
 catch (Exception $e) {
-  echo "Error: " . $e->getMessage();
-  //header("Location: create_new_user.php?message=fail");
+  //This can be used for error checking
+  //echo "Error: " . $e->getMessage();
+  header("Location: create_new_user.php?message=fail");
   die();
 }
 

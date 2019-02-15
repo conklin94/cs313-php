@@ -23,6 +23,8 @@
   }
   catch (Exception $e)
   {
+    //This can be used for error checking
+    //echo "Error: " . $e->getMessage();
     header("Location: books.php?message=book");
     die();
   }
