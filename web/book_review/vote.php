@@ -30,7 +30,8 @@
     }
     catch (Exception $e)
     {
-      header("Location: books.php?message=vote");
+      echo "error: " . $e->getMessage();
+      //header("Location: books.php?message=vote");
       die();
     }
   }
