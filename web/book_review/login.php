@@ -20,6 +20,8 @@
         echo "<h3 class='message'>Incorrect username and/or password</h3>";
       } elseif ($message == 'login') {
         echo "<h3 class='message'>You must log in to perform this action</h3>";
+      } elseif ($message == 'user') {
+        echo "<h3 class='message'>New user successfully created</h3>";
       }
     ?>
     <br>
