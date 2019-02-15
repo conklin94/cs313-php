@@ -11,7 +11,7 @@
       $is_up = True;
       $book_id = $_POST['up'];
     }
-    elseif (isset($_POST['down']))
+    else
     {
       $is_up = False;
       $book_id = $_POST['down'];
