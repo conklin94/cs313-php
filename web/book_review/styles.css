@@ -87,7 +87,7 @@ button {
 .search input {
   display: inline;
 }
-#add_book {
+.link {
   float: left;
   display: inline;
   color: white;

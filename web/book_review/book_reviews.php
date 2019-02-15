@@ -27,7 +27,8 @@
         echo "  <img src='$image_link' alt='$title'>";
         echo "  <h2>Written by $author</h2>";
         echo "  <h4>$description</h4>";
-        echo "  <a href='add_review.php?book_id=$book_id'>Add a review</a>";
+        echo "  <a class = 'link' href='add_review.php?book_id=$book_id'>";
+        echo "Add a review</a>";
         echo "</div>";
       }
       $stmt2 = $db->prepare('SELECT (SELECT username FROM reader rd

@@ -30,6 +30,9 @@
       <input type="password" name="password"><br>
       <button type="submit" name="login" value="True">Log in</button>
     </form>
+    <a class="link" href='create_new_user.php'>Create New User</a>
+
+    </form>
 
   </body>
 </html>
