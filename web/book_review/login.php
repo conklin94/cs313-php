@@ -29,7 +29,9 @@
       <label for="password">Password</label><br>
       <input type="password" name="password"><br>
       <button type="submit" name="login" value="True">Log in</button>
-      <a class="link" href='create_new_user.php'>Create New User</a>
+    </form>
+    <form class="login" action="create_new_user.php" method='post'>
+      <button type="submit" name="create_new_user">Create New User</button>
     </form>
 
 
