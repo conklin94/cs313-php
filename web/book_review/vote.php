@@ -11,9 +11,9 @@
       $is_up = True;
       $book_id = $_POST['up'];
     }
-    else
+    elseif (isset($_POST['down']))
     {
-      $is_up = False;
+      $is_up = "False";
       $book_id = $_POST['down'];
     }
     $db = get_db();
