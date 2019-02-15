@@ -11,6 +11,7 @@
     <?php
       include 'header.php';
       $message = htmlspecialchars($_GET['message']);
+      echo "<br>";
       if ($message == 'password') {
         echo "<h3 class='message'>The passwords must match</h3>";
       } elseif ($message == 'fail') {
