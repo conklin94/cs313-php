@@ -18,10 +18,12 @@
     $stmt->execute(array(':title' => $title, ':image_link' => $image_link,
                          ':description' => $description, ':author' => $author,
                          ':created_by' => $created_by));
-    header("Location: books.php", true, 301);
+    header("Location: books.php");
+    die();
   }
   catch (Exception $e)
   {
-    header("Location: books.php?message=book", true, 301);
+    header("Location: books.php?message=book");
+    die();
   }
 ?>

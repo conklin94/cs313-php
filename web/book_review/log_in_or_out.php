@@ -11,20 +11,21 @@
     $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
     foreach ($rows as $row) {
       $_SESSION['logged_in'] = $username;
-      header("Location: books.php", true, 301);
-      exit();
+      header("Location: books.php");
+      die();
     }
-    header("Location: login.php?message=fail", true, 301);
-    exit();
+    header("Location: login.php?message=fail");
+    die();
   }
   else {
     if (isset($_SESSION['logged_in'])) {
       unset($_SESSION['logged_in']);
-      header("Location: login.php?message=success", true, 301);
-      exit();
+      header("Location: login.php?message=success");
+      die();
     }
     else {
-      header("Location: login.php", true, 301);
+      header("Location: login.php");
+      die();
     }
   }
 

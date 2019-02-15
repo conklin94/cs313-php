@@ -48,6 +48,15 @@
         echo "  <h5>Written $date by $username</h5>";
         echo "</div>";
 
+        if (isset($_SESSION['logged_in']) and
+                  $_SESSION['logged_in'] == $username)
+        {
+          echo "<form action='delete_review.php' method='post'>";
+          echo "  <button type='submit' name='delete' value='$book_id'>Delete</button>";
+          echo "</button>";
+          echo "</form>";
+        }
+
       }
     ?>
   </body>

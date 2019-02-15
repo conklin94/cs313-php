@@ -15,10 +15,12 @@
                                    :stars, :comments, current_date)');
     $stmt->execute(array(':username' => $username, ':book_id' => $book_id,
                          ':stars' => $stars, ':comments' => $comments));
-    header("Location: book_reviews.php?book=$book_id", true, 301);
+    header("Location: book_reviews.php?book=$book_id");
+    die();
   }
   catch (Exception $e)
   {
     header("Location: books.php?message=review", true, 301);
+    die();
   }
 ?>

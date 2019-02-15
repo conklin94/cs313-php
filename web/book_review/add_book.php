@@ -28,7 +28,8 @@
       }
       else
       {
-        header("Location: login.php?message=login", true, 301);
+        header("Location: login.php?message=login");
+        die();
       }
     ?>
   </body>

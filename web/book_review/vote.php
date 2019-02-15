@@ -25,15 +25,18 @@
                                      :is_up)');
       $stmt->execute(array(':username' => $username, ':book_id' => $book_id,
                            ':is_up' => $is_up));
-      header("Location: books.php", true, 301);
+      header("Location: books.php");
+      die();
     }
     catch (Exception $e)
     {
-      header("Location: books.php?message=vote", true, 301);
+      header("Location: books.php?message=vote");
+      die();
     }
   }
   else
   {
-    header("Location: login.php?message=login", true, 301);
+    header("Location: login.php?message=login");
+    die();
   }
 ?>
