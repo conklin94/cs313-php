@@ -20,8 +20,8 @@
       <input type="text" name="last_name"><br>
       <label for="username">Username:</label><br>
       <input type="text" name="username"><br>
-      <label for="password">Password:</label><br>
-      <input type="password" name="password"><br>
+      <label for="password1">Password:</label><br>
+      <input type="password" name="password1"><br>
       <label for="password2">Re-enter Password:</label><br>
       <input type="password" name="password2"><br>
       <button type="submit" name="create_user">Create</button>
