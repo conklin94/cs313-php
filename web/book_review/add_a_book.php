@@ -7,6 +7,11 @@
   $image_link = htmlspecialchars($_POST['image_link']);
   $description = htmlspecialchars($_POST['description']);
   $created_by = $_SESSION['logged_in'];
+  if ($title == '' or $author == '' or $image_link == '' or $description == '')
+  {
+    header("Location: books.php?message=book");
+    die();
+  }
   try
   {
     $stmt = $db->prepare('INSERT INTO book (title, image_link, description,

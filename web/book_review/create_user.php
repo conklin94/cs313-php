@@ -9,6 +9,13 @@ $email = htmlspecialchars($_POST['email']);
 $password1 = htmlspecialchars($_POST['password1']);
 $password2 = htmlspecialchars($_POST['password2']);
 
+if ($first_name == '' or $last_name == '' or $username == '' or $email == ''
+    or $password1 == '' or $password2 == '')
+{
+  header("Location: create_new_user.php?message=fail");
+  die();
+}
+
 if ($password1 != $password2)
 {
   header("Location: create_new_user.php?message=password");
