@@ -22,7 +22,7 @@ if ($password1 != $password2)
   die();
 }
 
-if (strlen($password1) < 7 or (0 === preg_match('~[0-9]~', $password1))
+if (strlen($password1) < 7 or (0 === preg_match('~[0-9]~', $password1)))
 {
   header("Location: create_new_user.php?message=password1");
   die();
