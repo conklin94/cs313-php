@@ -17,7 +17,9 @@ try
     $passwordHash = password_hash($password, PASSWORD_DEFAULT);
     $stmt = $db->prepare('UPDATE reader SET password = :password
                           WHERE username = :username');
-    $stmt->execute(array(':password' => $passwordHash, ':username', $username));
+    $stmt->bindValue(':password', $passwordHash, PDO::PARAM_STR);
+    $stmt->bindValue(':username', $username, PDO::PARAM_STR);
+    $stmt->execute();
   }
   echo "Passwords updated successfully";
 }
