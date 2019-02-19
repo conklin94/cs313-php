@@ -14,6 +14,9 @@
       echo "<br>";
       if ($message == 'password') {
         echo "<h3 class='message'>The passwords must match</h3>";
+      } elseif ($message == 'password1') {
+        echo "<h3 class='message'>The password must be at least 7 characters";
+        echo " long and contain at least 1 number</h3>";
       } elseif ($message == 'fail') {
         echo "<h3 class='message'>Unable to create user, make sure all fields";
         echo " are filled in. You may also need to try a different username";

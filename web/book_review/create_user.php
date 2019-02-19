@@ -22,6 +22,13 @@ if ($password1 != $password2)
   die();
 }
 
+if (strlen($password1) < 7 or (0 === preg_match('~[0-9]~', $password1))
+{
+  header("Location: create_new_user.php?message=password1");
+  die();
+}
+$passwordHash = password_hash($password1, PASSWORD_DEFAULT);
+
 try {
   $stmt = $db->prepare('INSERT INTO reader(username, first_name, last_name,
                                            email, password)
@@ -29,7 +36,7 @@ try {
                                 :password)');
   $stmt->execute(array(':username' => $username, ':first_name' => $first_name,
                        ':last_name' => $last_name, 'email' => $email,
-                       ':password' => $password1));
+                       ':password' => $passwordHash));
   header("Location: login.php?message=user");
   die();
 }

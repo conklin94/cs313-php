@@ -29,6 +29,10 @@
           echo "<h3 class='message2'>There was an error when trying to add the";
           echo " review. Each user can only add a review for a given book";
           echo " once</h3>";
+        } elseif ($message == 'welcome')
+        {
+          echo "<h3 class='message2'>Welcome " . $_SESSION['logged_in'];
+          echo "</h3>";
         }
       }
     ?>
