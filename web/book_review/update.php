@@ -1,5 +1,5 @@
 <?php
-require 'myDb.sql';
+require 'db_access.php';
 $db = get_db();
 
 try
