@@ -7,6 +7,8 @@ $password1 = htmlspecialchars($_POST['password1']);
 $password2 = htmlspecialchars($_POST['password2']);
 $username = $_SESSION['logged_in'];
 
+echo $password . " " . $password1 . " " . $password2 . " " . $username . " ";
+
 if ($password1 != $password2)
 {
   header("Location: update_user.php?message=password");
