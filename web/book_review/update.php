@@ -39,7 +39,8 @@ try {
     die();
   } else {
     // Wrong password
-    header("Location: update_user.php?message=fail1");
+    echo strlen($passwordHash)
+    //header("Location: update_user.php?message=fail1");
     die();
   }
 

@@ -5,6 +5,7 @@
   if ($_POST['login'] == 'True') {
     $username = htmlspecialchars($_POST['username']);
     $password = htmlspecialchars($_POST['password']);
+
     $stmt = $db->prepare('SELECT reader_id, password FROM reader
                           WHERE username=:username');
     $stmt->execute(array(':username' => $username));
