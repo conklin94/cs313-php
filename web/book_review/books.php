@@ -33,6 +33,9 @@
         {
           echo "<h3 class='message2'>Welcome " . $_SESSION['logged_in'];
           echo "</h3>";
+        } elseif ($message == 'password')
+        {
+          echo "<h3 class='message2'>Your password was changed</h3>";
         }
       }
     ?>

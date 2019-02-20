@@ -21,6 +21,11 @@
           echo "    <button type=\"submit\" name=\"login\" value=\"False\">
           Log out</button>";
           echo "  </form>";
+          if (basename($_SERVER['PHP_SELF'])!= 'update_user.php') {
+            echo "  <form class='log' action=\"update_user.php\" method=\"post\">";
+            echo "    <button type=\"submit\">Change Password</button>";
+            echo "  </form>";
+          }
         }
         elseif (basename($_SERVER['PHP_SELF'])!= 'login.php') {
           echo "  <form class='log' action=\"login.php\" method=\"post\">";

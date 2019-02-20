@@ -46,8 +46,4 @@ catch (Exception $e) {
   header("Location: create_new_user.php?message=fail");
   die();
 }
-
-echo "Hello $first_name $last_name, How are you?";
-echo " $username will be your username, and $password1 shall be your password.";
-echo " Assuming that $password1 equals $password2, otherwise you are doomed.";
 ?>
