@@ -18,11 +18,8 @@
         $db = get_db();
         $stmt = $db->prepare('SELECT title FROM book WHERE book_id=:book_id');
         $stmt->execute(array(':book_id' => $book_id));
-        $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
-        foreach ($rows as $row)
-        {
-          $book = $row['title'];
-        }
+        $row = $stmt->fetch();
+        $book = $row['title'];
         $_SESSION['book_id'] = $book_id;
         echo "<h1 class='add_review'>Add a Book Review for $book</h1>";
         echo "<form class='add_review' action='add_a_review.php'";

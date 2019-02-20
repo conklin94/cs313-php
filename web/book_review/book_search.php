@@ -21,7 +21,8 @@
                             WHERE v.book_id = b.book_id
                             AND is_up=\'no\') AS count
                             FROM book b WHERE title LIKE \'%\' || :search || \'%\'
-                            OR author LIKE \'%\' || :search || \'%\'');
+                            OR author LIKE \'%\' || :search || \'%\'
+                            ORDER BY count DESC, title ASC');
       $stmt->execute(array(':search' => $search));
       $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
       foreach ($rows as $row) {

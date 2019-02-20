@@ -88,8 +88,6 @@ button {
   display: inline;
 }
 .link {
-  float: left;
-  display: inline;
   color: white;
   background-color: #1743A1;
   margin-left: 50px;
