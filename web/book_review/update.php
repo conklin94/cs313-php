@@ -20,7 +20,7 @@ if (strlen($password1) < 7 or (0 === preg_match('~[0-9]~', $password1)))
 }
 
 try {
-  $stmt = $db->prepare('SELECT password FROM reader
+  $stmt = $db->prepare('SELECT reader_id, password FROM reader
                         WHERE username=:username');
   $stmt->execute(array(':username' => $username));
   $row = $stmt->fetch();
