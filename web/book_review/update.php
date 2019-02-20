@@ -1,5 +1,5 @@
 <?php
-session_start()
+session_start();
 require 'db_access.php';
 $db = get_db();
 
