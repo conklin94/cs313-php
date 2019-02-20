@@ -1,4 +1,5 @@
 <?php
+session_start()
 require 'db_access.php';
 $db = get_db();
 
@@ -6,8 +7,6 @@ $password = htmlspecialchars($_POST['password']);
 $password1 = htmlspecialchars($_POST['password1']);
 $password2 = htmlspecialchars($_POST['password2']);
 $username = $_SESSION['logged_in'];
-
-echo $password . " " . $password1 . " " . $password2 . " " . $username . " ";
 
 if ($password1 != $password2)
 {
@@ -22,7 +21,7 @@ if (strlen($password1) < 7 or (0 === preg_match('~[0-9]~', $password1)))
 }
 
 try {
-  $stmt = $db->prepare('SELECT reader_id, password FROM reader
+  $stmt = $db->prepare('SELECT password FROM reader
                         WHERE username=:username');
   $stmt->execute(array(':username' => $username));
   $row = $stmt->fetch();
@@ -41,8 +40,7 @@ try {
     die();
   } else {
     // Wrong password
-    echo strlen($passwordHash);
-    //header("Location: update_user.php?message=fail1");
+    header("Location: update_user.php?message=fail1");
     die();
   }
 
