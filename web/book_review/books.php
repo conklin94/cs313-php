@@ -51,7 +51,7 @@
                               AND is_up=\'no\') AS count,
                               b.description FROM book b
                               ORDER BY count DESC, title ASC');
-      echo "<div id='book_container'>";
+      echo "<span id='book_container'>";
       while ($row = $statement->fetch(PDO::FETCH_ASSOC))
       {
         $book_id = $row['book_id'];
@@ -79,7 +79,7 @@
         echo "</div>";
       }
     ?>
-    </div>
+  </span>
     <br>
     <a class='link' href="add_book.php">Add a book</a>
   </body>
