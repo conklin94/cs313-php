@@ -44,7 +44,7 @@
       contain at least 1 number</div><br>
       <label for="password2">Re-enter New Password:</label><br>
       <input type="password" name="password2" oninput="validatePassword()"
-      id="pass1" required>
+      id="pass2" required>
       <div id="password_text2">Passwords must match</div><br>
       <button type="submit" name="change">Change</button>
     </form>
