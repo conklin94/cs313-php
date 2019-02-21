@@ -25,7 +25,7 @@
     ?>
     <br>
     <h1 class='login'>Create New User</h1>
-    <form name="new_user" class="login" action="create_user.php" method="post">
+    <form id="new_user" class="login" action="create_user.php" method="post">
       <label for="first_name">First Name:</label><br>
       <input type="text" name="first_name" required><br>
       <label for="last_name">Last Name:</label><br>
@@ -35,7 +35,8 @@
       <label for="email">Email:</label><br>
       <input type="text" name="email" required><br>
       <label for="password1">Password:</label><br>
-      <input type="password" name="password1" required><br>
+      <input type="password" name="password1" oninput="validatePassword()"
+      required><br>
       <label for="password2">Re-enter Password:</label><br>
       <input type="password" name="password2" oninput="validatePassword()"
       required>
