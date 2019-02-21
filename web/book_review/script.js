@@ -6,6 +6,5 @@ function validatePassword() {
   //  text.style.display = "inline";
   //} else {
   //  text.style.display = "none";
-  alert("IT was called at least");
-  }
+  alert("It was called at least");
 }
