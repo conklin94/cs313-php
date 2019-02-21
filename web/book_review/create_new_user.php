@@ -33,7 +33,8 @@
       <label for="username">Username:</label><br>
       <input type="text" name="username" required><br>
       <label for="email">Email:</label><br>
-      <input type="text" name="email" required><br>
+      <input type="text" name="email" oninput="validatePassword()"
+      required><br>
       <label for="password1">Password:</label><br>
       <input type="password" name="password1" oninput="validatePassword()"
       required><br>
