@@ -6,5 +6,6 @@ function validatePassword() {
     text.style.display = "inline";
   } else {
     text.style.display = "none";
+  }
   alert(password1 + " " + password2);
 }
