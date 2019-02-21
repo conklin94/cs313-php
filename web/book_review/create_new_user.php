@@ -25,21 +25,23 @@
     ?>
     <br>
     <h1 class='login'>Create New User</h1>
-    <form class="login" action="create_user.php" method="post">
+    <form name="new_user" class="login" action="create_user.php" method="post">
       <label for="first_name">First Name:</label><br>
-      <input type="text" name="first_name"><br>
+      <input type="text" name="first_name" required><br>
       <label for="last_name">Last Name:</label><br>
-      <input type="text" name="last_name"><br>
+      <input type="text" name="last_name" required><br>
       <label for="username">Username:</label><br>
-      <input type="text" name="username"><br>
+      <input type="text" name="username" required><br>
       <label for="email">Email:</label><br>
-      <input type="text" name="email"><br>
+      <input type="text" name="email" required><br>
       <label for="password1">Password:</label><br>
-      <input type="password" name="password1"><br>
+      <input type="password" name="password1" required><br>
       <label for="password2">Re-enter Password:</label><br>
-      <input type="password" name="password2"><br>
+      <input type="password" name="password2" oninput="validatePassword()"
+      required>
+      <div id="password_text">Passwords must match</div><br>
       <button type="submit" name="create_user">Create</button>
     </form>
-
+    <script src="script.js"></script>
   </body>
 </html>
