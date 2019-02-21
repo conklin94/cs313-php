@@ -143,7 +143,11 @@ button {
   margin-left: 50px;
   margin-top: 30px;
 }
-#password_text {
+#password_text2 {
+  color: red;
+  display: none;
+}
+#password_text1 {
   color: red;
   display: none;
 }

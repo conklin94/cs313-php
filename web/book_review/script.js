@@ -1,11 +1,17 @@
 function validatePassword() {
   var password1 = document.getElementById("pass1").value;
   var password2 = document.getElementById("pass2").value;
-  var text = document.getElementById("password_text");
-  if (password1 != password2) {
-    text.style.display = "inline";
-  } else {
-    text.style.display = "none";
+  var text1 = document.getElementById("password_text1");
+  var text2 = document.getElementById("password_text2");
+  if (password1.length < 7 || /\d/.test(password1)) {
+    text1.style.display = "inline";
   }
-  alert(password1 + " " + password2);
+  else {
+    text1.style.display = "none";
+  }
+  if (password1 != password2) {
+    text2.style.display = "inline";
+  } else {
+    text2.style.display = "none";
+  }
 }
