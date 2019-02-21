@@ -145,4 +145,5 @@ button {
 }
 #password_text {
   color: red;
+  display: none;
 }
