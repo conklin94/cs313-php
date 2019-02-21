@@ -36,13 +36,18 @@
     <br>
     <form class="login" action="update.php" method="post">
       <label for="password"> Old Password:</label><br>
-      <input type="password" name="password"><br>
+      <input type="password" name="password" required><br>
       <label for="password1">New Password:</label><br>
-      <input type="password" name="password1"><br>
-      <label for="password2">Re-enter New Password:</label><br>
-      <input type="password" name="password2"><br>
+      <input type="password" name="password1" oninput="validatePassword()"
+      id="pass1" required>
+      <div id="password_text1">Password must be at least 7 characters and
+      contain at least 1 number</div><br>
+      <label for="password2">Re-enter New Password:</label>
+      <div id="password_text2">Passwords must match</div><br>
+      <input type="password" name="password2" oninput="validatePassword()"
+      id="pass1" required>
       <button type="submit" name="change">Change</button>
     </form>
-
+    <script src="script.js"></script>
   </body>
 </html>

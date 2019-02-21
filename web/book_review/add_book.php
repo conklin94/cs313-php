@@ -15,13 +15,14 @@
         echo "<h1 class='add_book'>Add a Book</h1>";
         echo "<form class='add_book' action='add_a_book.php' method='post'>";
         echo "  <label for='title'>Title</label><br>";
-        echo "  <input type='text' name='title'><br>";
+        echo "  <input type='text' name='title' required><br>";
         echo "  <label for='author'>Author</label><br>";
-        echo "  <input type='text' name='author'><br>";
+        echo "  <input type='text' name='author' required><br>";
         echo "  <label for='image_link'>Image Link</label><br>";
-        echo "  <input type='text' name='image_link'><br>";
+        echo "  <input type='text' name='image_link' required><br>";
         echo "  <label for='description'>Description</label><br>";
-        echo "  <textarea rows='5' cols='100' name='description'></textarea>";
+        echo "  <textarea rows='5' cols='100' name='description' required>";
+        echo "</textarea>";
         echo "  <br><br>";
         echo "  <button type='submit'>Add Book</button>";
         echo "</form>";
