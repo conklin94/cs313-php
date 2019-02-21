@@ -3,7 +3,7 @@ function validatePassword() {
   var password2 = document.getElementById("pass2").value;
   var text1 = document.getElementById("password_text1");
   var text2 = document.getElementById("password_text2");
-  if (password1.length < 7 || /\d/.test(password1)) {
+  if (password1.length < 7 || !(/\d/.test(password1)) {
     text1.style.display = "block";
   }
   else {
