@@ -36,10 +36,10 @@
       <input type="text" name="email" required><br>
       <label for="password1">Password:</label><br>
       <input type="password" name="password1" oninput="validatePassword()"
-      required><br>
+      id="pass1" required><br>
       <label for="password2">Re-enter Password:</label><br>
       <input type="password" name="password2" oninput="validatePassword()"
-      required>
+      id="pass2" required>
       <div id="password_text">Passwords must match</div><br>
       <button type="submit" name="create_user">Create</button>
     </form>
