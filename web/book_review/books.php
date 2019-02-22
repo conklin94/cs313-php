@@ -80,7 +80,5 @@
       }
     ?>
   </div>
-    <br>
-    <a class='link' href="add_book.php">Add a book</a>
   </body>
 </html>

@@ -27,7 +27,7 @@
         echo "  <img src='$image_link' alt='$title'>";
         echo "  <h2>Written by $author</h2>";
         echo "  <h4>$description</h4>";
-        echo "  <a class = 'link2' href='add_review.php?book_id=$book_id'>";
+        echo "  <a class = 'link' href='add_review.php?book_id=$book_id'>";
         echo "Add a review</a>";
         echo "</div>";
       }

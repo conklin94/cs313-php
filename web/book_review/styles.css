@@ -88,18 +88,6 @@ button {
   display: inline;
 }
 .link {
-  float: left;
-  margin-left: 200px;
-  display: inline;
-  color: white;
-  background-color: #1743A1;
-  margin-top: 50px;
-  padding: 10px;
-  text-decoration: none;
-  font-family: sans-serif;
-  font-size: 16px;
-}
-.link2 {
   display: inline;
   color: white;
   background-color: #1743A1;
