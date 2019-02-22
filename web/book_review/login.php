@@ -27,9 +27,9 @@
     <br>
     <form class="login" action="log_in_or_out.php" method="post">
       <label for="username">Username</label><br>
-      <input type="text" name="username"><br>
+      <input type="text" name="username" require><br>
       <label for="password">Password</label><br>
-      <input type="password" name="password"><br>
+      <input type="password" name="password" require><br>
       <button type="submit" name="login" value="True">Log in</button>
     </form>
     <form class="login" action="create_new_user.php" method='post'>
