@@ -26,6 +26,11 @@
             echo "    <button type=\"submit\">Change Password</button>";
             echo "  </form>";
           }
+          if (basename($_SERVER['PHP_SELF'])!= 'add_book.php') {
+            echo "  <form class='log' action=\"add_book.php\" method=\"post\">";
+            echo "    <button type=\"submit\">Add Book</button>";
+            echo "  </form>";
+          }
         }
         elseif (basename($_SERVER['PHP_SELF'])!= 'login.php') {
           echo "  <form class='log' action=\"login.php\" method=\"post\">";
